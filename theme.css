@@ -1,227 +1,174 @@
-/* @settings
-name: Syzygy Customization
+/***************************************
+@settings
 id: syzygy
-settings:
-    - id: bg-primary
-      title: Primary Background
-      type: variable-color
-      format: hex
-      default: "#f0e4d7"
-    - id: bg-secondary
-      title: Secondary Background
-      type: variable-color
-      format: hex
-      default: "#b7d5d1"
-    - id: border
-      title: Border Color
-      type: variable-color
-      format: rgba
-      default: "rgba(80, 80, 80, 0.3)"
-    - id: text-normal
-      title: Normal Text Color
-      type: variable-color
-      format: hex
-      default: "#4a4a4a"
-    - id: text-muted
-      title: Muted Text Color
-      type: variable-color
-      format: hex
-      default: "#4b3c3c"
-    - id: text-accent
-      title: Accent Text Color
-      type: variable-color
-      format: hex
-      default: "#d19a99"
-    - id: highlight-bg
-      title: Highlight Background
-      type: variable-color
-      format: rgba
-      default: "rgba(210, 154, 153, 0.3)"
-    - id: h1-color
-      title: H1 Color
-      type: variable-color
-      format: hex
-      default: "#d19a99"
-    - id: h2-color
-      title: H2 Color
-      type: variable-color
-      format: hex
-      default: "#4b3c3c"
-    - id: h3-color
-      title: H3 Color
-      type: variable-color
-      format: hex
-      default: "#b7d5d1"
-    - id: code-bg
-      title: Code Block Background
-      type: variable-color
-      format: hex
-      default: "#f0e4d7"
-    - id: code-text
-      title: Code Text Color
-      type: variable-color
-      format: hex
-      default: "#4a4a4a"
-    - id: code-comment
-      title: Code Comment Color
-      type: variable-color
-      format: hex
-      default: "#b7d5d1"
-    - id: font-body
-      title: Body Font
-      type: variable-text
-      default: "Merriweather, serif"
-    - id: font-heading
-      title: Heading Font
-      type: variable-text
-      default: "Merriweather, serif"
-    - id: font-code
-      title: Code Font
-      type: variable-text
-      default: "Fira Code, monospace"
-    - id: radius-small
-      title: Small Radius
-      type: variable-number
-      default: 20
-      format: px
-    - id: radius-medium
-      title: Medium Radius
-      type: variable-number
-      default: 20
-      format: px
-    - id: radius-large
-      title: Large Radius
-      type: variable-number
-      default: 20
-      format: px
-*/
-
-/* 🌑 Syzygy Theme - Personalized, Earthy, and Muted */
-:root {
-	/* 🎨 Background Colors */
-	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #f0e4d7) !important; /* Warm Parchment */
-	--syzygy-bg-secondary: var(--syzygy-bg-secondary-setting, #b7d5d1) !important; /* Soft Muted Green */
-	--syzygy-border: var(--syzygy-border-setting, rgba(80, 80, 80, 0.3)) !important; /* Soft Charcoal */
-
-	/* 🎯 Text Colors */
-	--syzygy-text-normal: var(--syzygy-text-normal-setting, #4a4a4a) !important; /* Dark Charcoal */
-	--syzygy-text-muted: var(--syzygy-text-muted-setting, #4b3c3c) !important; /* Earthy Brown */
-	--syzygy-text-accent: var(--syzygy-text-accent-setting, #d19a99) !important; /* Muted Rose */
-	--syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(210, 154, 153, 0.3)) !important; /* Soft Pink Highlight */
-
-	/* 🏆 Headers & Titles */
-	--syzygy-h1-color: var(--syzygy-h1-color-setting, #d19a99) !important; /* Muted Rose */
-	--syzygy-h2-color: var(--syzygy-h2-color-setting, #4b3c3c) !important; /* Earthy Brown */
-	--syzygy-h3-color: var(--syzygy-h3-color-setting, #b7d5d1) !important; /* Soft Muted Green */
-
-	/* 🟡 Code Blocks */
-	--syzygy-code-bg: var(--syzygy-code-bg-setting, #f0e4d7) !important; /* Warm Parchment */
-	--syzygy-code-text: var(--syzygy-code-text-setting, #4a4a4a) !important; /* Dark Charcoal */
-	--syzygy-code-comment: var(--syzygy-code-comment-setting, #b7d5d1) !important; /* Soft Muted Green */
-
-	/* 🎨 Fonts */
-	--syzygy-font-body: var(--syzygy-font-body-setting, "Merriweather", serif) !important;  /* Vintage Serif */
-	--syzygy-font-heading: var(--syzygy-font-heading-setting, "Merriweather", serif) !important;  /* Vintage Serif */
-	--syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace) !important;
-
-	/* 🖌️ UI Elements */
-	--syzygy-radius-small: var(--syzygy-radius-small-setting, 20px) !important;  /* Circular Button */
-	--syzygy-radius-medium: var(--syzygy-radius-medium-setting, 20px) !important;  /* Circular Button */
-	--syzygy-radius-large: var(--syzygy-radius-large-setting, 20px) !important;  /* Circular Button */
-}
-
-/* ✅ Apply Styles */
-body {
-	font-family: var(--syzygy-font-body) !important;
-	background-color: var(--syzygy-bg-primary) !important;
-	color: var(--syzygy-text-normal) !important;
-}
-
-/* 🎨 Headings */
-h1, h2, h3, h4, h5, h6 {
-	font-family: var(--syzygy-font-heading) !important;
-	font-weight: 600 !important;
-	margin: 0 0 10px !important;
-}
-
-h1 { color: var(--syzygy-h1-color) !important; font-size: 2.5rem !important; }
-h2 { color: var(--syzygy-h2-color) !important; font-size: 2rem !important; }
-h3 { color: var(--syzygy-h3-color) !important; font-size: 1.75rem !important; }
-h4 { color: var(--syzygy-text-accent) !important; font-size: 1.5rem !important; }
-h5 { color: var(--syzygy-text-muted) !important; font-size: 1.25rem !important; }
-h6 { color: var(--syzygy-border) !important; font-size: 1rem !important; }
-
-/* 🟡 Code Blocks */
-pre, code {
-	background-color: var(--syzygy-code-bg) !important;
-	color: var(--syzygy-code-text) !important;
-	border-radius: var(--syzygy-radius-medium) !important;
-	padding: 6px !important;
-	font-family: var(--syzygy-font-code) !important;
-}
-
-/* 🔹 Links */
-a {
-	color: var(--syzygy-text-accent) !important;
-	text-decoration: none !important;
-	border-bottom: 1px solid var(--syzygy-text-accent) !important;
-	transition: all 0.3s ease-in-out !important; /* Smooth Transition */
-}
-
-a:hover {
-	color: var(--syzygy-h1-color) !important;
-	border-bottom: 2px solid var(--syzygy-h1-color) !important;
-}
-
-/* 🚀 Sidebar */
-.sidebar-inner {
-	background-color: var(--syzygy-bg-secondary) !important;
-	padding: 15px !important;
-	border-right: 2px solid var(--syzygy-border) !important;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Soft Shadow */
-}
-
-/* 🔥 Menu Customization */
-.menu {
-	padding: 12px !important;
-	border-radius: var(--syzygy-radius-medium) !important;
-	background-color: var(--syzygy-bg-secondary) !important;
-	border: 1px solid var(--syzygy-border) !important;
-}
-
-.menu-item {
-	padding: 10px 14px !important;
-	border-radius: var(--syzygy-radius-small) !important; /* Circular Button */
-	transition: background 0.3s ease-in-out !important; /* Smooth Transition */
-}
-
-.menu-item:hover {
-	background: var(--syzygy-highlight-bg) !important;
-}
-
-/* 🌿 Buttons */
-button {
-	background-color: var(--syzygy-bg-secondary) !important;
-	color: var(--syzygy-text-normal) !important;
-	border: 2px solid var(--syzygy-border) !important;
-	border-radius: var(--syzygy-radius-medium) !important; /* Circular Button */
-	padding: 8px 16px !important;
-	font-size: 1rem !important;
-	transition: all 0.3s ease-in-out !important; /* Smooth Transition */
-}
-
-button:hover {
-	background-color: var(--syzygy-h1-color) !important;
-	color: var(--syzygy-bg-primary) !important;
-}
-
-/* ✨ Cursor Glow Effect */
-* {
-	cursor: url("https://your-hosted-cursor-url.cur"), auto !important;
-}
-
-/* ✅ Ensure Higher Specificity */
-html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
-	background-color: var(--syzygy-bg-primary) !important;
-	color: var(--syzygy-text-normal) !important;
+name: Syzygy
+description: "A personalized, earthy, and muted theme with full customization options."
+version: 1.0.0
+***************************************/
+{
+	"styleSettingsVersion": 1,
+	"id": "syzygy",
+	"name": "Syzygy",
+	"settings": [
+		{
+			"id": "syzygy-colors-section",
+			"title": "🎨 Colors",
+			"description": "Customize the primary color palette for Syzygy.",
+			"type": "heading",
+			"level": 1,
+			"collapsed": true
+		},
+		{
+			"id": "syzygy-bg-primary-setting",
+			"title": "Primary Background",
+			"type": "color",
+			"default": "#f0e4d7"
+		},
+		{
+			"id": "syzygy-bg-secondary-setting",
+			"title": "Secondary Background",
+			"type": "color",
+			"default": "#b7d5d1"
+		},
+		{
+			"id": "syzygy-border-setting",
+			"title": "Border Color",
+			"type": "color",
+			"default": "rgba(80, 80, 80, 0.3)"
+		},
+		{
+			"id": "syzygy-text-section",
+			"title": "📝 Text & Headings",
+			"description": "Customize text, headings, and accent colors.",
+			"type": "heading",
+			"level": 1,
+			"collapsed": true
+		},
+		{
+			"id": "syzygy-text-normal-setting",
+			"title": "Normal Text Color",
+			"type": "color",
+			"default": "#4a4a4a"
+		},
+		{
+			"id": "syzygy-text-muted-setting",
+			"title": "Muted Text Color",
+			"type": "color",
+			"default": "#4b3c3c"
+		},
+		{
+			"id": "syzygy-text-accent-setting",
+			"title": "Accent Text Color",
+			"type": "color",
+			"default": "#d19a99"
+		},
+		{
+			"id": "syzygy-h1-color-setting",
+			"title": "H1 Color",
+			"type": "color",
+			"default": "#d19a99"
+		},
+		{
+			"id": "syzygy-h2-color-setting",
+			"title": "H2 Color",
+			"type": "color",
+			"default": "#4b3c3c"
+		},
+		{
+			"id": "syzygy-h3-color-setting",
+			"title": "H3 Color",
+			"type": "color",
+			"default": "#b7d5d1"
+		},
+		{
+			"id": "syzygy-code-section",
+			"title": "💻 Code Blocks",
+			"description": "Customize the appearance of code blocks.",
+			"type": "heading",
+			"level": 1,
+			"collapsed": true
+		},
+		{
+			"id": "syzygy-code-bg-setting",
+			"title": "Code Block Background",
+			"type": "color",
+			"default": "#f0e4d7"
+		},
+		{
+			"id": "syzygy-code-text-setting",
+			"title": "Code Text Color",
+			"type": "color",
+			"default": "#4a4a4a"
+		},
+		{
+			"id": "syzygy-code-comment-setting",
+			"title": "Code Comment Color",
+			"type": "color",
+			"default": "#b7d5d1"
+		},
+		{
+			"id": "syzygy-font-section",
+			"title": "🔠 Fonts",
+			"description": "Customize fonts for body, headings, and code.",
+			"type": "heading",
+			"level": 1,
+			"collapsed": true
+		},
+		{
+			"id": "syzygy-font-body-setting",
+			"title": "Body Font",
+			"type": "dropdown",
+			"default": "Merriweather, serif",
+			"options": ["Merriweather, serif"]
+		},
+		{
+			"id": "syzygy-font-heading-setting",
+			"title": "Heading Font",
+			"type": "dropdown",
+			"default": "Merriweather, serif",
+			"options": ["Merriweather, serif"]
+		},
+		{
+			"id": "syzygy-font-code-setting",
+			"title": "Code Font",
+			"type": "dropdown",
+			"default": "Fira Code, monospace",
+			"options": ["Fira Code, monospace"]
+		},
+		{
+			"id": "syzygy-radius-section",
+			"title": "🔳 Border Radius",
+			"description": "Adjust UI border radius for a custom look.",
+			"type": "heading",
+			"level": 1,
+			"collapsed": true
+		},
+		{
+			"id": "syzygy-radius-small-setting",
+			"title": "Small Radius",
+			"type": "slider",
+			"default": 20,
+			"min": 0,
+			"max": 50,
+			"step": 1
+		},
+		{
+			"id": "syzygy-radius-medium-setting",
+			"title": "Medium Radius",
+			"type": "slider",
+			"default": 20,
+			"min": 0,
+			"max": 50,
+			"step": 1
+		},
+		{
+			"id": "syzygy-radius-large-setting",
+			"title": "Large Radius",
+			"type": "slider",
+			"default": 20,
+			"min": 0,
+			"max": 50,
+			"step": 1
+		}
+	]
 }
