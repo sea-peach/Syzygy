@@ -14,27 +14,27 @@ settings:
       description: Select your preferred light mode flavor
       type: class-select
       allowEmpty: false
-      default: "syzygy-light-parchment"
+      default: "syzygy-light-biscuit"
       options:
-        - label: "Parchment"
-          value: "theme-syzygy-light-parchment"
-        - label: "Rosé Pine"
-          value: "theme-syzygy-light-rosepine"
-        - label: "Sage Breeze"
-          value: "theme-syzygy-light-sage"
+        - label: "Biscuit"
+          value: "theme-syzygy-light-biscuit"
+        - label: "Rose Petal"
+          value: "theme-syzygy-light-rosepetal"
+        - label: "Emerald"
+          value: "theme-syzygy-light-emerald"
     - id: syzygy-theme-dark
       title: Dark Theme Flavor
       description: Select your preferred dark mode flavor
       type: class-select
       allowEmpty: false
-      default: "syzygy-dark-forest"
+      default: "syzygy-dark-moss"
       options:
-        - label: "Forest"
-          value: "theme-syzygy-dark-forest"
-        - label: "Abyss"
-          value: "theme-syzygy-dark-abyss"
-        - label: "Obsidian Night"
-          value: "theme-syzygy-dark-obsidian"
+        - label: "Moss"
+          value: "theme-syzygy-dark-moss"
+        - label: "Eclipse"
+          value: "theme-syzygy-dark-eclipse"
+        - label: "Lunar"
+          value: "theme-syzygy-dark-lunar"
     - id: syzygy-theme-accent
       title: Theme Accent
       description: Select your preferred theme accent color
@@ -150,17 +150,17 @@ settings:
       title: Code Font
       type: variable-text
       default: "Fira Code, monospace"
-    - id: radius-small
+    - id: syzygy-radius-small
       title: Small Radius
       type: variable-number
       default: 20
       format: px
-    - id: radius-medium
+    - id: syzygy-radius-medium
       title: Medium Radius
       type: variable-number
       default: 20
       format: px
-    - id: radius-large
+    - id: syzygy-radius-large
       title: Large Radius
       type: variable-number
       default: 20
@@ -170,7 +170,7 @@ settings:
 /* 🌑 Syzygy Theme - Personalized, Earthy, and Muted */
 :root {
 	/* 🎨 Background Colors */
-	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #f0e4d7) !important; /* Warm Parchment */
+	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #f0e4d7) !important; /* Warm biscuit */
 	--syzygy-bg-secondary: var(--syzygy-bg-secondary-setting, #b7d5d1) !important; /* Soft Muted Green */
 	--syzygy-border: var(--syzygy-border-setting, rgba(80, 80, 80, 0.3)) !important; /* Soft Charcoal */
 
@@ -186,7 +186,7 @@ settings:
 	--syzygy-h3-color: var(--syzygy-h3-color-setting, #b7d5d1) !important; /* Soft Muted Green */
 
 	/* 🟡 Code Blocks */
-	--syzygy-code-bg: var(--syzygy-code-bg-setting, #f0e4d7) !important; /* Warm Parchment */
+	--syzygy-code-bg: var(--syzygy-code-bg-setting, #f0e4d7) !important; /* Warm biscuit */
 	--syzygy-code-text: var(--syzygy-code-text-setting, #4a4a4a) !important; /* Dark Charcoal */
 	--syzygy-code-comment: var(--syzygy-code-comment-setting, #b7d5d1) !important; /* Soft Muted Green */
 
@@ -303,43 +303,44 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 }
 
 /* 🔹 Theme Flavors */
-.theme-syzygy-light-parchment {
+.theme-syzygy-light-biscuit {
 	--syzygy-bg-primary: #f0e4d7;
 	--syzygy-bg-secondary: #e3c8a3;
 	--syzygy-text-normal: #3b3b3b;
 	--syzygy-text-accent: #b07c8f;
 	--syzygy-border: rgba(80, 80, 80, 0.3);
 }
-.theme-syzygy-light-rosepine {
+.theme-syzygy-light-rosepetal {
 	--syzygy-bg-primary: #f1e8e6;
 	--syzygy-bg-secondary: #dab5b3;
 	--syzygy-text-normal: #4a2b2b;
 	--syzygy-text-accent: #d37d7b;
 	--syzygy-border: rgba(100, 50, 50, 0.3);
 }
-.theme-syzygy-light-sage {
+.theme-syzygy-light-emerald {
 	--syzygy-bg-primary: #e3e7d7;
 	--syzygy-bg-secondary: #a8c4a2;
 	--syzygy-text-normal: #3d4b3d;
 	--syzygy-text-accent: #709970;
 	--syzygy-border: rgba(80, 120, 80, 0.3);
 }
-
-.theme-syzygy-dark-forest {
+/* DARK THEME */
+ 
+.theme-syzygy-dark-moss {
 	--syzygy-bg-primary: #1f2b23;
 	--syzygy-bg-secondary: #3a4a3c;
 	--syzygy-text-normal: #cfdac3;
 	--syzygy-text-accent: #a7c67b;
 	--syzygy-border: rgba(180, 220, 140, 0.3);
 }
-.theme-syzygy-dark-abyss {
+.theme-syzygy-dark-eclipse {
 	--syzygy-bg-primary: #13171f;
 	--syzygy-bg-secondary: #262a3b;
 	--syzygy-text-normal: #d9dde9;
 	--syzygy-text-accent: #6b88c7;
 	--syzygy-border: rgba(100, 120, 180, 0.3);
 }
-.theme-syzygy-dark-obsidian {
+.theme-syzygy-dark-lunar {
 	--syzygy-bg-primary: #0d0d0d;
 	--syzygy-bg-secondary: #1a1a1a;
 	--syzygy-text-normal: #e6e6e6;
@@ -349,25 +350,25 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 
 /* 🎨 Theme Accents */
 .theme-syzygy-accent-rose {
-	--syzygy-text-accent: #d19a99;
+	--syzygy-flavor-accent: #d19a99;
 }
 .theme-syzygy-accent-pine {
-	--syzygy-text-accent: #35524a;
+	--syzygy-flavor-accent: #35524a;
 }
 .theme-syzygy-accent-sage {
-	--syzygy-text-accent: #a7c4a0;
+	--syzygy-flavor-accent: #a7c4a0;
 }
 .theme-syzygy-accent-brass {
-	--syzygy-text-accent: #8c7851;
+	--syzygy-flavor-accent: #8c7851;
 }
 .theme-syzygy-accent-copper {
-	--syzygy-text-accent: #b87333;
+	--syzygy-flavor-accent: #b87333;
 }
 .theme-syzygy-accent-wine {
-	--syzygy-text-accent: #6d1a36;
+	--syzygy-flavor-accent: #6d1a36;
 }
 .theme-syzygy-accent-lavender {
-	--syzygy-text-accent: #9c89b8;
+	--syzygy-flavor-accent: #9c89b8;
 }
 
 /* 🔹 H4 Divider Option */
@@ -395,7 +396,7 @@ h4 {
 }
 
 .workspace-tab-header {
-  background-color: #00897b;
+  background-color: var(--syzygy-flavor-accent);
   margin: 4px;
 }
 
@@ -470,7 +471,7 @@ table {
 
 /* End of Modular Enhancements */
 
-.theme-light.syzygy-light-parchment, .syzygy-light-parchment .themed-color-wrapper > .theme-light {
+.theme-light.syzygy-light-biscuit, .syzygy-light-biscuit .themed-color-wrapper > .theme-light {
   --syz-rose: var(--syz-custom-rose, var(--syz-ext-rose, 224, 153, 149));
   --syz-pine: var(--syz-custom-pine, var(--syz-ext-pine, 86, 148, 139));
   --syz-sage: var(--syz-custom-sage, var(--syz-ext-sage, 148, 178, 130));
@@ -489,7 +490,7 @@ table {
   --syz-crust: var(--syz-custom-crust, var(--syz-ext-crust, 221, 208, 198));
 }
 
-.theme-dark.syzygy-dark-forest, .syzygy-dark-forest .themed-color-wrapper > .theme-dark {
+.theme-dark.syzygy-dark-moss, .syzygy-dark-moss .themed-color-wrapper > .theme-dark {
   --syz-rose: var(--syz-custom-rose, var(--syz-ext-rose, 224, 153, 149));
   --syz-pine: var(--syz-custom-pine, var(--syz-ext-pine, 86, 148, 139));
   --syz-sage: var(--syz-custom-sage, var(--syz-ext-sage, 148, 178, 130));
@@ -511,15 +512,25 @@ table {
 
 /* RIBBON */
 .side-dock-ribbon {
-  border: 2px solid #00897b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--syzygy-flavor-accent);
 }
 
 
 .side-dock-actions {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-evenly;
+  border: 2px solid var(--syzygy-border);
+  height: 100%;
+  border-radius: var(--syzygy-radius-medium);
+}
+
+.side-dock-settings {
+  visibility: hidden;
 }
 
 .side-dock-ribbon-action {
@@ -527,10 +538,5 @@ table {
 }
 
 .side-dock-ribbon-action:hover {
-  border: 2px solid var(--syzygy-text-accent);
-}
-
-.side-dock-settings {
-  border: 2px solid green;
-  height: 30px;
+  border: 2px solid var(--syzygy-flavor-accent);
 }
