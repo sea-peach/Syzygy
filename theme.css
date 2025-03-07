@@ -17,11 +17,11 @@ settings:
       default: "syzygy-light-parchment"
       options:
         - label: "Parchment"
-          value: "syzygy-light-parchment"
+          value: "theme-syzygy-light-parchment"
         - label: "Rosé Pine"
-          value: "syzygy-light-rosepine"
+          value: "theme-syzygy-light-rosepine"
         - label: "Sage Breeze"
-          value: "syzygy-light-sage"
+          value: "theme-syzygy-light-sage"
     - id: syzygy-theme-dark
       title: Dark Theme Flavor
       description: Select your preferred dark mode flavor
@@ -30,11 +30,11 @@ settings:
       default: "syzygy-dark-forest"
       options:
         - label: "Forest"
-          value: "syzygy-dark-forest"
+          value: "theme-syzygy-dark-forest"
         - label: "Abyss"
-          value: "syzygy-dark-abyss"
+          value: "theme-syzygy-dark-abyss"
         - label: "Obsidian Night"
-          value: "syzygy-dark-obsidian"
+          value: "theme-syzygy-dark-obsidian"
     - id: syzygy-theme-accent
       title: Theme Accent
       description: Select your preferred theme accent color
@@ -43,19 +43,19 @@ settings:
       default: "none"
       options:
         - label: "Muted Rose"
-          value: "syzygy-accent-rose"
+          value: "theme-syzygy-accent-rose"
         - label: "Earthy Pine"
-          value: "syzygy-accent-pine"
+          value: "theme-syzygy-accent-pine"
         - label: "Sage Green"
-          value: "syzygy-accent-sage"
+          value: "theme-syzygy-accent-sage"
         - label: "Brass Gold"
-          value: "syzygy-accent-brass"
+          value: "theme-syzygy-accent-brass"
         - label: "Warm Copper"
-          value: "syzygy-accent-copper"
+          value: "theme-syzygy-accent-copper"
         - label: "Deep Wine"
-          value: "syzygy-accent-wine"
+          value: "theme-syzygy-accent-wine"
         - label: "Soft Lavender"
-          value: "syzygy-accent-lavender"
+          value: "theme-syzygy-accent-lavender"
 
     - id: syz-colors-section-header
       title: Colors
@@ -297,10 +297,10 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 	color: var(--syzygy-text-normal) !important;
 }
 
-/* .workspace-tab-header-container {
-  background-color: var();
+.workspace-tab-header-container {
+  background-color: var(--syzygy-bg-secondary-setting);
   
-} */
+}
 
 /* 🔹 Theme Flavors */
 .theme-syzygy-light-parchment {
@@ -431,12 +431,12 @@ h4 {
 }
 
 /* Modular Color Scheme Overrides */
-/* Using Jes’s defined variable names and flavors */
+/* Using Jes’s defined variable names and flavors
 :root {
   --rosewater: var(--rosewater-setting, #d19a99);
   --sapphire: var(--sapphire-setting, #0f52ba);
   --peach: var(--peach-setting, #ffab91);
-}
+} */
 
 /* File & Markdown-Specific Styling */
 /* Customizable options for code blocks, lists, tables, and callouts */
@@ -506,4 +506,31 @@ table {
   --syz-base: var(--syz-custom-base, var(--syz-ext-base, 36, 39, 58));
   --syz-mantle: var(--syz-custom-mantle, var(--syz-ext-mantle, 30, 32, 48));
   --syz-crust: var(--syz-custom-crust, var(--syz-ext-crust, 24, 25, 38));
+}
+
+
+/* RIBBON */
+.side-dock-ribbon {
+  border: 2px solid #00897b;
+}
+
+
+.side-dock-actions {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.side-dock-ribbon-action {
+  border: 2px solid transparent;
+}
+
+.side-dock-ribbon-action:hover {
+  border: 2px solid var(--syzygy-text-accent);
+}
+
+.side-dock-settings {
+  border: 2px solid green;
+  height: 30px;
 }
