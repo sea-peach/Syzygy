@@ -1,62 +1,96 @@
 /* 🌑 Syzygy Theme - Minimal, Cosmic, and Structured */
 :root {
 	/* 🎨 Background Colors */
-	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #0a0a0a);
-	--syzygy-bg-secondary: var(--syzygy-bg-secondary-setting, #161616);
-	--syzygy-border: var(--syzygy-border-setting, rgba(255, 255, 255, 0.1));
+	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #0a0a0a) !important;
+	--syzygy-bg-secondary: var(--syzygy-bg-secondary-setting, #161616) !important;
+	--syzygy-border: var(--syzygy-border-setting, rgba(255, 255, 255, 0.1)) !important;
   
 	/* 🎯 Text Colors */
-	--syzygy-text-normal: var(--syzygy-text-normal-setting, #e0e0e0);
-	--syzygy-text-muted: var(--syzygy-text-muted-setting, #a0a0a0);
-	--syzygy-text-accent: var(--syzygy-text-accent-setting, #00ffff);
-	--syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(0, 255, 255, 0.2));
+	--syzygy-text-normal: var(--syzygy-text-normal-setting, #e0e0e0) !important;
+	--syzygy-text-muted: var(--syzygy-text-muted-setting, #a0a0a0) !important;
+	--syzygy-text-accent: var(--syzygy-text-accent-setting, #00ffff) !important;
+	--syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(0, 255, 255, 0.2)) !important;
   
 	/* 🏆 Headers & Titles */
-	--syzygy-h1-color: var(--syzygy-h1-color-setting, #ffffff);
-	--syzygy-h2-color: var(--syzygy-h2-color-setting, #00ffff);
-	--syzygy-h3-color: var(--syzygy-h3-color-setting, #77ddff);
+	--syzygy-h1-color: var(--syzygy-h1-color-setting, #ffffff) !important;
+	--syzygy-h2-color: var(--syzygy-h2-color-setting, #00ffff) !important;
+	--syzygy-h3-color: var(--syzygy-h3-color-setting, #77ddff) !important;
   
 	/* 🟡 Code Blocks */
-	--syzygy-code-bg: var(--syzygy-code-bg-setting, #121212);
-	--syzygy-code-text: var(--syzygy-code-text-setting, #ffcc66);
-	--syzygy-code-comment: var(--syzygy-code-comment-setting, #888888);
+	--syzygy-code-bg: var(--syzygy-code-bg-setting, #121212) !important;
+	--syzygy-code-text: var(--syzygy-code-text-setting, #ffcc66) !important;
+	--syzygy-code-comment: var(--syzygy-code-comment-setting, #888888) !important;
   
 	/* 🎨 Fonts */
-	--syzygy-font-body: var(--syzygy-font-body-setting, "Verdana", sans-serif);
-	--syzygy-font-heading: var(--syzygy-font-heading-setting, "Georgia", serif);
-	--syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace);
+	--syzygy-font-body: var(--syzygy-font-body-setting, "Verdana", sans-serif) !important;
+	--syzygy-font-heading: var(--syzygy-font-heading-setting, "Georgia", serif) !important;
+	--syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace) !important;
   
 	/* 🖌️ UI Elements */
-	--syzygy-radius-small: var(--syzygy-radius-small-setting, 2px);
-	--syzygy-radius-medium: var(--syzygy-radius-medium-setting, 4px);
-	--syzygy-radius-large: var(--syzygy-radius-large-setting, 6px);
+	--syzygy-radius-small: var(--syzygy-radius-small-setting, 2px) !important;
+	--syzygy-radius-medium: var(--syzygy-radius-medium-setting, 4px) !important;
+	--syzygy-radius-large: var(--syzygy-radius-large-setting, 6px) !important;
 }
 
 /* ✅ Apply Styles */
 body {
-	font-family: var(--syzygy-font-body);
-	background-color: var(--syzygy-bg-primary);
-	color: var(--syzygy-text-normal);
+	font-family: var(--syzygy-font-body) !important;
+	background-color: var(--syzygy-bg-primary) !important;
+	color: var(--syzygy-text-normal) !important;
 }
 
+/* 🎨 Headings */
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--syzygy-font-heading);
+	font-family: var(--syzygy-font-heading) !important;
+	margin: 0 0 10px !important;
 }
 
-h1 { color: var(--syzygy-h1-color); font-size: 2rem; text-transform: uppercase; }
-h2 { color: var(--syzygy-h2-color); font-size: 1.8rem; }
-h3 { color: var(--syzygy-h3-color); font-size: 1.5rem; }
+h1 { color: var(--syzygy-h1-color) !important; font-size: 2rem !important; text-transform: uppercase !important; }
+h2 { color: var(--syzygy-h2-color) !important; font-size: 1.8rem !important; }
+h3 { color: var(--syzygy-h3-color) !important; font-size: 1.5rem !important; }
 
+/* 🟡 Code Blocks */
 pre, code {
-	background-color: var(--syzygy-code-bg);
-	color: var(--syzygy-code-text);
-	border-radius: var(--syzygy-radius-medium);
-	padding: 5px;
-	font-family: var(--syzygy-font-code);
+	background-color: var(--syzygy-code-bg) !important;
+	color: var(--syzygy-code-text) !important;
+	border-radius: var(--syzygy-radius-medium) !important;
+	padding: 5px !important;
+	font-family: var(--syzygy-font-code) !important;
 }
 
-/* ✨ UI Elements */
-.menu { padding: 10px; border-radius: var(--syzygy-radius-medium); }
-.menu-item { padding: 8px 12px; transition: background 0.2s ease-in-out; }
-.menu-item:hover { background: var(--syzygy-highlight-bg); }
+/* 🔹 Links */
+a {
+	color: var(--syzygy-text-accent) !important;
+	text-decoration: underline !important;
+}
 
+/* 🚀 Sidebar */
+.sidebar-inner {
+	background-color: var(--syzygy-bg-secondary) !important;
+}
+
+/* 🔥 Menu Customization */
+.menu {
+	padding: 10px !important;
+	border-radius: var(--syzygy-radius-medium) !important;
+}
+
+.menu-item {
+	padding: 8px 12px !important;
+	transition: background 0.2s ease-in-out !important;
+}
+
+.menu-item:hover {
+	background: var(--syzygy-highlight-bg) !important;
+}
+
+/* ✨ Cursor Glow Effect */
+* {
+	cursor: url("https://your-hosted-cursor-url.cur"), auto !important;
+}
+
+/* ✅ Ensure Higher Specificity */
+html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
+	background-color: var(--syzygy-bg-primary) !important;
+	color: var(--syzygy-text-normal) !important;
+}
