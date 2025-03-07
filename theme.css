@@ -6,75 +6,75 @@ settings:
       title: Primary Background
       type: variable-color
       format: hex
-      default: "#f0e4d7"  /* Warm Parchment
+      default: "#f0e4d7"
     - id: bg-secondary
       title: Secondary Background
       type: variable-color
       format: hex
-      default: "#b7d5d1"  /* Soft Muted Green
+      default: "#b7d5d1"
     - id: border
       title: Border Color
       type: variable-color
       format: rgba
-      default: "rgba(80, 80, 80, 0.3)"  /* Soft Charcoal
+      default: "rgba(80, 80, 80, 0.3)"
     - id: text-normal
       title: Normal Text Color
       type: variable-color
       format: hex
-      default: "#4a4a4a"  /* Dark Charcoal
+      default: "#4a4a4a"
     - id: text-muted
       title: Muted Text Color
       type: variable-color
       format: hex
-      default: "#4b3c3c"  /* Earthy Brown
+      default: "#4b3c3c"
     - id: text-accent
       title: Accent Text Color
       type: variable-color
       format: hex
-      default: "#d19a99"  /* Muted Rose
+      default: "#d19a99"
     - id: highlight-bg
       title: Highlight Background
       type: variable-color
       format: rgba
-      default: "rgba(210, 154, 153, 0.3)"  /* Soft Pink Highlight
+      default: "rgba(210, 154, 153, 0.3)"
     - id: h1-color
       title: H1 Color
       type: variable-color
       format: hex
-      default: "#d19a99"  /* Muted Rose
+      default: "#d19a99"
     - id: h2-color
       title: H2 Color
       type: variable-color
       format: hex
-      default: "#4b3c3c"  /* Earthy Brown
+      default: "#4b3c3c"
     - id: h3-color
       title: H3 Color
       type: variable-color
       format: hex
-      default: "#b7d5d1"  /* Soft Muted Green
+      default: "#b7d5d1"
     - id: code-bg
       title: Code Block Background
       type: variable-color
       format: hex
-      default: "#f0e4d7"  /* Warm Parchment
+      default: "#f0e4d7"
     - id: code-text
       title: Code Text Color
       type: variable-color
       format: hex
-      default: "#4a4a4a"  /* Dark Charcoal
+      default: "#4a4a4a"
     - id: code-comment
       title: Code Comment Color
       type: variable-color
       format: hex
-      default: "#b7d5d1"  /* Soft Muted Green
+      default: "#b7d5d1"
     - id: font-body
       title: Body Font
       type: variable-text
-      default: "Merriweather, serif"  /* Vintage Serif
+      default: "Merriweather, serif"
     - id: font-heading
       title: Heading Font
       type: variable-text
-      default: "Merriweather, serif"  /* Vintage Serif
+      default: "Merriweather, serif"
     - id: font-code
       title: Code Font
       type: variable-text
@@ -82,17 +82,17 @@ settings:
     - id: radius-small
       title: Small Radius
       type: variable-number
-      default: 20  /* Circular Button
+      default: 20
       format: px
     - id: radius-medium
       title: Medium Radius
       type: variable-number
-      default: 20  /* Circular Button
+      default: 20
       format: px
     - id: radius-large
       title: Large Radius
       type: variable-number
-      default: 20  /* Circular Button
+      default: 20
       format: px
 */
 
