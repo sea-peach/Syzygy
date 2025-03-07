@@ -394,3 +394,116 @@ h4 {
 	color: var(--syzygy-h4-color, var(--syzygy-text-accent)) !important;
 }
 
+.workspace-tab-header {
+  background-color: #00897b;
+  margin: 4px;
+}
+
+/* ================= Modular UI Settings ================= */
+/* Workspace Layout Customization */
+/* Variables for card layout, translucency, spacing, and toggleable elements */
+:root {
+  --workspace-card-layout: var(--workspace-card-layout-setting, true);
+  --workspace-translucency: var(--workspace-translucency-setting, 0.15);
+  --workspace-spacing: var(--workspace-spacing-setting, 10px);
+  --toggle-scrollbars: var(--toggle-scrollbars-setting, true);
+  --toggle-status-bar: var(--toggle-status-bar-setting, true);
+  --toggle-side-panels: var(--toggle-side-panels-setting, true);
+}
+
+/* Expanded Typography Controls */
+/* Detailed settings for fonts, weights, sizes, and custom heading dividers & colors */
+:root {
+  --font-h1: var(--font-h1-setting, "Noto Serif");
+  --font-h2: var(--font-h2-setting, "Noto Serif");
+  --font-h3: var(--font-h3-setting, "Noto Serif");
+  --font-h4: var(--font-h4-setting, "Noto Serif");
+  --h1-weight: var(--h1-weight-setting, 700);
+  --h2-weight: var(--h2-weight-setting, 600);
+  --h3-weight: var(--h3-weight-setting, 600);
+  --h4-weight: var(--h4-weight-setting, 600);
+  --h1-size: var(--h1-size-setting, 2.5rem);
+  --h2-size: var(--h2-size-setting, 2rem);
+  --h3-size: var(--h3-size-setting, 1.75rem);
+  --h4-size: var(--h4-size-setting, 1.5rem);
+  --h4-divider-color: var(--h4-divider-color-setting, var(--syzygy-text-accent));
+  --h4-divider-style: var(--h4-divider-style-setting, solid);
+}
+
+/* Modular Color Scheme Overrides */
+/* Using Jes’s defined variable names and flavors */
+:root {
+  --rosewater: var(--rosewater-setting, #d19a99);
+  --sapphire: var(--sapphire-setting, #0f52ba);
+  --peach: var(--peach-setting, #ffab91);
+}
+
+/* File & Markdown-Specific Styling */
+/* Customizable options for code blocks, lists, tables, and callouts */
+/* Adjustable indentation, padding, and line heights */
+.code-block {
+  padding: var(--code-block-padding, 6px) !important;
+  border-radius: var(--code-block-radius, var(--syzygy-radius-medium)) !important;
+}
+
+.markdown-list {
+  margin-left: var(--list-indent, 2em) !important;
+  line-height: var(--list-line-height, 1.5) !important;
+}
+
+table {
+  padding: var(--table-padding, 10px) !important;
+  line-height: var(--table-line-height, 1.4) !important;
+}
+
+/* Workspace & Interaction Enhancements */
+/* Status bar customization, cursor & sidebar modifications */
+.status-bar {
+  position: var(--status-bar-position, fixed) !important;
+  opacity: var(--status-bar-opacity, 1) !important;
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg, var(--syzygy-bg-secondary)) !important;
+  padding: var(--sidebar-padding, 15px) !important;
+}
+
+/* End of Modular Enhancements */
+
+.theme-light.syzygy-light-parchment, .syzygy-light-parchment .themed-color-wrapper > .theme-light {
+  --syz-rose: var(--syz-custom-rose, var(--syz-ext-rose, 224, 153, 149));
+  --syz-pine: var(--syz-custom-pine, var(--syz-ext-pine, 86, 148, 139));
+  --syz-sage: var(--syz-custom-sage, var(--syz-ext-sage, 148, 178, 130));
+  --syz-brass: var(--syz-custom-brass, var(--syz-ext-brass, 210, 152, 82));
+  --syz-copper: var(--syz-custom-copper, var(--syz-ext-copper, 191, 117, 94));
+  --syz-wine: var(--syz-custom-wine, var(--syz-ext-wine, 130, 48, 63));
+  --syz-lavender: var(--syz-custom-lavender, var(--syz-ext-lavender, 164, 133, 191));
+
+  --syz-text: var(--syz-custom-text, var(--syz-ext-text, 74, 74, 74));
+  --syz-subtext1: var(--syz-custom-subtext1, var(--syz-ext-subtext1, 97, 92, 132));
+  --syz-overlay1: var(--syz-custom-overlay1, var(--syz-ext-overlay1, 152, 147, 165));
+  --syz-surface1: var(--syz-custom-surface1, var(--syz-ext-surface1, 209, 201, 194));
+
+  --syz-base: var(--syz-custom-base, var(--syz-ext-base, 240, 228, 215));
+  --syz-mantle: var(--syz-custom-mantle, var(--syz-ext-mantle, 230, 219, 209));
+  --syz-crust: var(--syz-custom-crust, var(--syz-ext-crust, 221, 208, 198));
+}
+
+.theme-dark.syzygy-dark-forest, .syzygy-dark-forest .themed-color-wrapper > .theme-dark {
+  --syz-rose: var(--syz-custom-rose, var(--syz-ext-rose, 224, 153, 149));
+  --syz-pine: var(--syz-custom-pine, var(--syz-ext-pine, 86, 148, 139));
+  --syz-sage: var(--syz-custom-sage, var(--syz-ext-sage, 148, 178, 130));
+  --syz-brass: var(--syz-custom-brass, var(--syz-ext-brass, 210, 152, 82));
+  --syz-copper: var(--syz-custom-copper, var(--syz-ext-copper, 191, 117, 94));
+  --syz-wine: var(--syz-custom-wine, var(--syz-ext-wine, 130, 48, 63));
+  --syz-lavender: var(--syz-custom-lavender, var(--syz-ext-lavender, 164, 133, 191));
+
+  --syz-text: var(--syz-custom-text, var(--syz-ext-text, 198, 206, 239));
+  --syz-subtext1: var(--syz-custom-subtext1, var(--syz-ext-subtext1, 181, 189, 220));
+  --syz-overlay1: var(--syz-custom-overlay1, var(--syz-ext-overlay1, 131, 138, 164));
+  --syz-surface1: var(--syz-custom-surface1, var(--syz-ext-surface1, 81, 86, 108));
+
+  --syz-base: var(--syz-custom-base, var(--syz-ext-base, 36, 39, 58));
+  --syz-mantle: var(--syz-custom-mantle, var(--syz-ext-mantle, 30, 32, 48));
+  --syz-crust: var(--syz-custom-crust, var(--syz-ext-crust, 24, 25, 38));
+}
