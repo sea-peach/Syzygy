@@ -298,7 +298,7 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 }
 
 .workspace-tab-header-container {
-  background-color: var(--syzygy-bg-secondary-setting);
+  background-color: var(--syzygy-bg-primary);
   
 }
 
@@ -516,7 +516,7 @@ table {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: var(--syzygy-flavor-accent);
+  background-color: var(--syzygy-bg-secondary);
 }
 
 
@@ -540,3 +540,16 @@ table {
 .side-dock-ribbon-action:hover {
   border: 2px solid var(--syzygy-flavor-accent);
 }
+
+.view-header-nav-buttons {
+  --icon-size: var(--icon-xs);
+}
+
+.view-header, .view-header-left, .view-header-title-container, .mod-at-start, .mod-fade  {
+  background-color: var(--syzygy-bg-primary);
+}
+
+.workspace-leaf-resize-handle:hover {
+  background-color: var(--syzygy-text-accent);
+}
+
