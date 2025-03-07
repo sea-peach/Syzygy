@@ -6,75 +6,75 @@ settings:
       title: Primary Background
       type: variable-color
       format: hex
-      default: "#e7dac7"
+      default: "#f0e4d7"  /* Warm Parchment
     - id: bg-secondary
       title: Secondary Background
       type: variable-color
       format: hex
-      default: "#a7c4a0"
+      default: "#b7d5d1"  /* Soft Muted Green
     - id: border
       title: Border Color
       type: variable-color
       format: rgba
-      default: "rgba(59, 59, 59, 0.2)"
+      default: "rgba(80, 80, 80, 0.3)"  /* Soft Charcoal
     - id: text-normal
       title: Normal Text Color
       type: variable-color
       format: hex
-      default: "#3b3b3b"
+      default: "#4a4a4a"  /* Dark Charcoal
     - id: text-muted
       title: Muted Text Color
       type: variable-color
       format: hex
-      default: "#35524a"
+      default: "#4b3c3c"  /* Earthy Brown
     - id: text-accent
       title: Accent Text Color
       type: variable-color
       format: hex
-      default: "#b07c8f"
+      default: "#d19a99"  /* Muted Rose
     - id: highlight-bg
       title: Highlight Background
       type: variable-color
       format: rgba
-      default: "rgba(176, 124, 143, 0.2)"
+      default: "rgba(210, 154, 153, 0.3)"  /* Soft Pink Highlight
     - id: h1-color
       title: H1 Color
       type: variable-color
       format: hex
-      default: "#b07c8f"
+      default: "#d19a99"  /* Muted Rose
     - id: h2-color
       title: H2 Color
       type: variable-color
       format: hex
-      default: "#35524a"
+      default: "#4b3c3c"  /* Earthy Brown
     - id: h3-color
       title: H3 Color
       type: variable-color
       format: hex
-      default: "#a7c4a0"
+      default: "#b7d5d1"  /* Soft Muted Green
     - id: code-bg
       title: Code Block Background
       type: variable-color
       format: hex
-      default: "#e7dac7"
+      default: "#f0e4d7"  /* Warm Parchment
     - id: code-text
       title: Code Text Color
       type: variable-color
       format: hex
-      default: "#3b3b3b"
+      default: "#4a4a4a"  /* Dark Charcoal
     - id: code-comment
       title: Code Comment Color
       type: variable-color
       format: hex
-      default: "#a7c4a0"
+      default: "#b7d5d1"  /* Soft Muted Green
     - id: font-body
       title: Body Font
       type: variable-text
-      default: "Cormorant Garamond, serif"
+      default: "Merriweather, serif"  /* Vintage Serif
     - id: font-heading
       title: Heading Font
       type: variable-text
-      default: "Playfair Display, serif"
+      default: "Merriweather, serif"  /* Vintage Serif
     - id: font-code
       title: Code Font
       type: variable-text
@@ -82,52 +82,52 @@ settings:
     - id: radius-small
       title: Small Radius
       type: variable-number
-      default: 3
+      default: 20  /* Circular Button
       format: px
     - id: radius-medium
       title: Medium Radius
       type: variable-number
-      default: 6
+      default: 20  /* Circular Button
       format: px
     - id: radius-large
       title: Large Radius
       type: variable-number
-      default: 12
+      default: 20  /* Circular Button
       format: px
 */
 
 /* 🌑 Syzygy Theme - Personalized, Earthy, and Muted */
 :root {
 	/* 🎨 Background Colors */
-	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #e7dac7) !important; /* Biscuit Neutral */
-	--syzygy-bg-secondary: var(--syzygy-bg-secondary-setting, #a7c4a0) !important; /* Sage Green */
-	--syzygy-border: var(--syzygy-border-setting, rgba(59, 59, 59, 0.2)) !important; /* Soft Charcoal */
+	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #f0e4d7) !important; /* Warm Parchment */
+	--syzygy-bg-secondary: var(--syzygy-bg-secondary-setting, #b7d5d1) !important; /* Soft Muted Green */
+	--syzygy-border: var(--syzygy-border-setting, rgba(80, 80, 80, 0.3)) !important; /* Soft Charcoal */
 
 	/* 🎯 Text Colors */
-	--syzygy-text-normal: var(--syzygy-text-normal-setting, #3b3b3b) !important; /* Soft Charcoal */
-	--syzygy-text-muted: var(--syzygy-text-muted-setting, #35524a) !important; /* Earthy Pine */
-	--syzygy-text-accent: var(--syzygy-text-accent-setting, #b07c8f) !important; /* Muted Rose */
-	--syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(176, 124, 143, 0.2)) !important;
+	--syzygy-text-normal: var(--syzygy-text-normal-setting, #4a4a4a) !important; /* Dark Charcoal */
+	--syzygy-text-muted: var(--syzygy-text-muted-setting, #4b3c3c) !important; /* Earthy Brown */
+	--syzygy-text-accent: var(--syzygy-text-accent-setting, #d19a99) !important; /* Muted Rose */
+	--syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(210, 154, 153, 0.3)) !important; /* Soft Pink Highlight */
 
 	/* 🏆 Headers & Titles */
-	--syzygy-h1-color: var(--syzygy-h1-color-setting, #b07c8f) !important; /* Muted Rose */
-	--syzygy-h2-color: var(--syzygy-h2-color-setting, #35524a) !important; /* Earthy Pine */
-	--syzygy-h3-color: var(--syzygy-h3-color-setting, #a7c4a0) !important; /* Sage */
+	--syzygy-h1-color: var(--syzygy-h1-color-setting, #d19a99) !important; /* Muted Rose */
+	--syzygy-h2-color: var(--syzygy-h2-color-setting, #4b3c3c) !important; /* Earthy Brown */
+	--syzygy-h3-color: var(--syzygy-h3-color-setting, #b7d5d1) !important; /* Soft Muted Green */
 
 	/* 🟡 Code Blocks */
-	--syzygy-code-bg: var(--syzygy-code-bg-setting, #e7dac7) !important; /* Biscuit */
-	--syzygy-code-text: var(--syzygy-code-text-setting, #3b3b3b) !important; /* Soft Charcoal */
-	--syzygy-code-comment: var(--syzygy-code-comment-setting, #a7c4a0) !important; /* Sage */
+	--syzygy-code-bg: var(--syzygy-code-bg-setting, #f0e4d7) !important; /* Warm Parchment */
+	--syzygy-code-text: var(--syzygy-code-text-setting, #4a4a4a) !important; /* Dark Charcoal */
+	--syzygy-code-comment: var(--syzygy-code-comment-setting, #b7d5d1) !important; /* Soft Muted Green */
 
 	/* 🎨 Fonts */
-	--syzygy-font-body: var(--syzygy-font-body-setting, "Cormorant Garamond", serif) !important;
-	--syzygy-font-heading: var(--syzygy-font-heading-setting, "Playfair Display", serif) !important;
+	--syzygy-font-body: var(--syzygy-font-body-setting, "Merriweather", serif) !important;  /* Vintage Serif */
+	--syzygy-font-heading: var(--syzygy-font-heading-setting, "Merriweather", serif) !important;  /* Vintage Serif */
 	--syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace) !important;
 
 	/* 🖌️ UI Elements */
-	--syzygy-radius-small: var(--syzygy-radius-small-setting, 3px) !important;
-	--syzygy-radius-medium: var(--syzygy-radius-medium-setting, 6px) !important;
-	--syzygy-radius-large: var(--syzygy-radius-large-setting, 12px) !important;
+	--syzygy-radius-small: var(--syzygy-radius-small-setting, 20px) !important;  /* Circular Button */
+	--syzygy-radius-medium: var(--syzygy-radius-medium-setting, 20px) !important;  /* Circular Button */
+	--syzygy-radius-large: var(--syzygy-radius-large-setting, 20px) !important;  /* Circular Button */
 }
 
 /* ✅ Apply Styles */
@@ -165,7 +165,7 @@ a {
 	color: var(--syzygy-text-accent) !important;
 	text-decoration: none !important;
 	border-bottom: 1px solid var(--syzygy-text-accent) !important;
-	transition: all 0.2s ease-in-out !important;
+	transition: all 0.3s ease-in-out !important; /* Smooth Transition */
 }
 
 a:hover {
@@ -178,6 +178,7 @@ a:hover {
 	background-color: var(--syzygy-bg-secondary) !important;
 	padding: 15px !important;
 	border-right: 2px solid var(--syzygy-border) !important;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Soft Shadow */
 }
 
 /* 🔥 Menu Customization */
@@ -190,8 +191,8 @@ a:hover {
 
 .menu-item {
 	padding: 10px 14px !important;
-	border-radius: var(--syzygy-radius-small) !important;
-	transition: background 0.2s ease-in-out !important;
+	border-radius: var(--syzygy-radius-small) !important; /* Circular Button */
+	transition: background 0.3s ease-in-out !important; /* Smooth Transition */
 }
 
 .menu-item:hover {
@@ -203,10 +204,10 @@ button {
 	background-color: var(--syzygy-bg-secondary) !important;
 	color: var(--syzygy-text-normal) !important;
 	border: 2px solid var(--syzygy-border) !important;
-	border-radius: var(--syzygy-radius-medium) !important;
+	border-radius: var(--syzygy-radius-medium) !important; /* Circular Button */
 	padding: 8px 16px !important;
 	font-size: 1rem !important;
-	transition: all 0.3s ease-in-out !important;
+	transition: all 0.3s ease-in-out !important; /* Smooth Transition */
 }
 
 button:hover {
