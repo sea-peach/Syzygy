@@ -1,0 +1,62 @@
+/* 🌑 Syzygy Theme - Minimal, Cosmic, and Structured */
+:root {
+	/* 🎨 Background Colors */
+	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #0a0a0a);
+	--syzygy-bg-secondary: var(--syzygy-bg-secondary-setting, #161616);
+	--syzygy-border: var(--syzygy-border-setting, rgba(255, 255, 255, 0.1));
+  
+	/* 🎯 Text Colors */
+	--syzygy-text-normal: var(--syzygy-text-normal-setting, #e0e0e0);
+	--syzygy-text-muted: var(--syzygy-text-muted-setting, #a0a0a0);
+	--syzygy-text-accent: var(--syzygy-text-accent-setting, #00ffff);
+	--syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(0, 255, 255, 0.2));
+  
+	/* 🏆 Headers & Titles */
+	--syzygy-h1-color: var(--syzygy-h1-color-setting, #ffffff);
+	--syzygy-h2-color: var(--syzygy-h2-color-setting, #00ffff);
+	--syzygy-h3-color: var(--syzygy-h3-color-setting, #77ddff);
+  
+	/* 🟡 Code Blocks */
+	--syzygy-code-bg: var(--syzygy-code-bg-setting, #121212);
+	--syzygy-code-text: var(--syzygy-code-text-setting, #ffcc66);
+	--syzygy-code-comment: var(--syzygy-code-comment-setting, #888888);
+  
+	/* 🎨 Fonts */
+	--syzygy-font-body: var(--syzygy-font-body-setting, "Verdana", sans-serif);
+	--syzygy-font-heading: var(--syzygy-font-heading-setting, "Georgia", serif);
+	--syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace);
+  
+	/* 🖌️ UI Elements */
+	--syzygy-radius-small: var(--syzygy-radius-small-setting, 2px);
+	--syzygy-radius-medium: var(--syzygy-radius-medium-setting, 4px);
+	--syzygy-radius-large: var(--syzygy-radius-large-setting, 6px);
+}
+
+/* ✅ Apply Styles */
+body {
+	font-family: var(--syzygy-font-body);
+	background-color: var(--syzygy-bg-primary);
+	color: var(--syzygy-text-normal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--syzygy-font-heading);
+}
+
+h1 { color: var(--syzygy-h1-color); font-size: 2rem; text-transform: uppercase; }
+h2 { color: var(--syzygy-h2-color); font-size: 1.8rem; }
+h3 { color: var(--syzygy-h3-color); font-size: 1.5rem; }
+
+pre, code {
+	background-color: var(--syzygy-code-bg);
+	color: var(--syzygy-code-text);
+	border-radius: var(--syzygy-radius-medium);
+	padding: 5px;
+	font-family: var(--syzygy-font-code);
+}
+
+/* ✨ UI Elements */
+.menu { padding: 10px; border-radius: var(--syzygy-radius-medium); }
+.menu-item { padding: 8px 12px; transition: background 0.2s ease-in-out; }
+.menu-item:hover { background: var(--syzygy-highlight-bg); }
+
