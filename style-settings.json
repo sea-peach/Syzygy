@@ -1,0 +1,133 @@
+{
+	"styleSettingsVersion": 1,
+	"id": "syzygy",
+	"name": "Syzygy",
+	"settings": [
+		{
+			"id": "syzygy-bg-primary-setting",
+			"title": "Primary Background",
+			"type": "color",
+			"default": "#e7dac7"
+		},
+		{
+			"id": "syzygy-bg-secondary-setting",
+			"title": "Secondary Background",
+			"type": "color",
+			"default": "#a7c4a0"
+		},
+		{
+			"id": "syzygy-border-setting",
+			"title": "Border Color",
+			"type": "color",
+			"default": "rgba(59, 59, 59, 0.2)"
+		},
+		{
+			"id": "syzygy-text-normal-setting",
+			"title": "Normal Text Color",
+			"type": "color",
+			"default": "#3b3b3b"
+		},
+		{
+			"id": "syzygy-text-muted-setting",
+			"title": "Muted Text Color",
+			"type": "color",
+			"default": "#35524a"
+		},
+		{
+			"id": "syzygy-text-accent-setting",
+			"title": "Accent Text Color",
+			"type": "color",
+			"default": "#b07c8f"
+		},
+		{
+			"id": "syzygy-highlight-bg-setting",
+			"title": "Highlight Background",
+			"type": "color",
+			"default": "rgba(176, 124, 143, 0.2)"
+		},
+		{
+			"id": "syzygy-h1-color-setting",
+			"title": "H1 Color",
+			"type": "color",
+			"default": "#b07c8f"
+		},
+		{
+			"id": "syzygy-h2-color-setting",
+			"title": "H2 Color",
+			"type": "color",
+			"default": "#35524a"
+		},
+		{
+			"id": "syzygy-h3-color-setting",
+			"title": "H3 Color",
+			"type": "color",
+			"default": "#a7c4a0"
+		},
+		{
+			"id": "syzygy-code-bg-setting",
+			"title": "Code Block Background",
+			"type": "color",
+			"default": "#e7dac7"
+		},
+		{
+			"id": "syzygy-code-text-setting",
+			"title": "Code Text Color",
+			"type": "color",
+			"default": "#3b3b3b"
+		},
+		{
+			"id": "syzygy-code-comment-setting",
+			"title": "Code Comment Color",
+			"type": "color",
+			"default": "#a7c4a0"
+		},
+		{
+			"id": "syzygy-font-body-setting",
+			"title": "Body Font",
+			"type": "dropdown",
+			"default": "Cormorant Garamond",
+			"options": ["Cormorant Garamond", "Inter", "Playfair Display", "Georgia", "Serif"]
+		},
+		{
+			"id": "syzygy-font-heading-setting",
+			"title": "Heading Font",
+			"type": "dropdown",
+			"default": "Playfair Display",
+			"options": ["Playfair Display", "Cormorant Garamond", "Georgia", "Times New Roman", "Serif"]
+		},
+		{
+			"id": "syzygy-font-code-setting",
+			"title": "Code Font",
+			"type": "dropdown",
+			"default": "Fira Code",
+			"options": ["Fira Code", "Source Code Pro", "Monospace"]
+		},
+		{
+			"id": "syzygy-radius-small-setting",
+			"title": "Small Radius",
+			"type": "slider",
+			"default": 3,
+			"min": 0,
+			"max": 12,
+			"step": 1
+		},
+		{
+			"id": "syzygy-radius-medium-setting",
+			"title": "Medium Radius",
+			"type": "slider",
+			"default": 6,
+			"min": 0,
+			"max": 20,
+			"step": 1
+		},
+		{
+			"id": "syzygy-radius-large-setting",
+			"title": "Large Radius",
+			"type": "slider",
+			"default": 12,
+			"min": 0,
+			"max": 30,
+			"step": 1
+		}
+	]
+}
