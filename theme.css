@@ -289,6 +289,7 @@ button:hover {
 /* ✨ Cursor Glow Effect */
 * {
 	cursor: url("https://your-hosted-cursor-url.cur"), auto !important;
+  box-sizing: border-box;
 }
 
 /* ✅ Ensure Higher Specificity */
@@ -299,7 +300,6 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 
 .workspace-tab-header-container {
   background-color: var(--syzygy-bg-primary);
-  
 }
 
 /* 🔹 Theme Flavors */
@@ -390,14 +390,50 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 .theme-syzygy-h4-blue { --syzygy-h4-color: #1976d2; }
 .theme-syzygy-h4-lavender { --syzygy-h4-color: #9c89b8; }
 
-/* Apply H4 Custom Colors */
-h4 {
-	color: var(--syzygy-h4-color, var(--syzygy-text-accent)) !important;
+.workspace-tab-header {
+  background: var(--syzygy-bg-secondary);
+  color: var(--syzygy-text-normal);
+  border-radius: var(--syzygy-radius-small);
+  transition: background 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.workspace-tab-header {
-  background-color: var(--syzygy-flavor-accent);
-  margin: 4px;
+/* ✨ Active Tab */
+.workspace-tab-header.is-active {
+  background: linear-gradient(135deg, var(--syzygy-h1-color), var(--syzygy-flavor-accent));
+  color: var(--syzygy-bg-primary);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: var(--syzygy-radius-medium);
+}
+
+/* 🌟 Hover Effect */
+.workspace-tab-header:hover {
+  background: var(--syzygy-highlight-bg);
+  color: var(--syzygy-text-accent);
+  transform: scale(1.02);
+}
+
+/* 🎨 Sidebar Tabs (to differentiate them) */
+.mod-left-split .workspace-tab-header,
+.mod-right-split .workspace-tab-header {
+  background: var(--syzygy-bg-primary);
+  color: var(--syzygy-text-muted);
+  border-radius: var(--syzygy-radius-small);
+}
+
+/* 🔹 Tab Title Styling */
+.workspace-tab-header-inner-title {
+  font-family: var(--syzygy-font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* 🔥 Pinned Tabs Stand Out */
+.workspace-tab-header.is-pinned {
+  background: var(--syzygy-text-accent);
+  color: var(--syzygy-bg-primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* ================= Modular UI Settings ================= */
@@ -541,15 +577,10 @@ table {
   border: 2px solid var(--syzygy-flavor-accent);
 }
 
-.view-header-nav-buttons {
-  --icon-size: var(--icon-xs);
-}
 
-.view-header, .view-header-left, .view-header-title-container, .mod-at-start, .mod-fade  {
-  background-color: var(--syzygy-bg-primary);
-}
 
 .workspace-leaf-resize-handle:hover {
   background-color: var(--syzygy-text-accent);
+  border-inline-end-color: var(--syzygy-text-accent);
 }
 
