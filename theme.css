@@ -591,3 +591,66 @@ table {
   border-inline-end-color: var(--interactive-accent);
 }
 
+/* 🌿 Styled Lists for Syzygy Theme */
+
+/* 🔹 General List Spacing & Indentation */
+ul, ol {
+  padding-left: var(--list-indent);
+  margin: var(--list-spacing) 0;
+  line-height: 1.6;
+}
+
+/* 📌 Bullet & Numbered List Styling */
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul > li::before {
+  content: "•"; /* Custom bullet symbol */
+  color: var(--list-marker-color);
+  font-size: var(--list-bullet-size);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.3rem;
+  margin-left: -1.3rem;
+}
+
+ul > li:hover::before {
+  color: var(--list-marker-color-hover);
+  transition: color 0.2s ease-in-out;
+}
+
+/* 🟢 Collapsible Lists (Hover Effect for Indicators) */
+ul > li.task-list-item[data-task=""]::before {
+  content: "⏷"; /* Default collapsed icon */
+  font-size: 0.8em;
+  color: var(--list-marker-color-collapsed);
+}
+
+ul > li.task-list-item[data-task="open"]::before {
+  content: "⏶"; /* Opened icon */
+}
+
+/* 🔢 Numbered Lists */
+ol {
+  list-style: var(--list-numbered-style);
+  padding-left: var(--list-indent);
+}
+
+ol > li {
+  padding-left: var(--list-bullet-end-padding);
+}
+
+/* ✨ Hover Interaction */
+ol > li:hover,
+ul > li:hover {
+  color: var(--interactive-accent);
+}
+
+/* 🎯 Bullet Shape Customization */
+ul > li::before {
+  border: var(--list-bullet-border);
+  border-radius: var(--list-bullet-radius);
+  transform: var(--list-bullet-transform);
+}
+
