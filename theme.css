@@ -170,14 +170,14 @@ settings:
 /* 🌑 Syzygy Theme - Personalized, Earthy, and Muted */
 :root {
 	/* 🎨 Background Colors */
-	--syzygy-bg-primary: var(--syzygy-bg-primary-setting, #f0e4d7) !important; /* Warm biscuit */
-	--syzygy-bg-secondary: var(--syzygy-bg-secondary-setting, #b7d5d1) !important; /* Soft Muted Green */
+	--background-primary: var(--background-primary-setting, #f0e4d7) !important; /* Warm biscuit */
+	--background-secondary: var(--background-secondary-setting, #b7d5d1) !important; /* Soft Muted Green */
 	--syzygy-border: var(--syzygy-border-setting, rgba(80, 80, 80, 0.3)) !important; /* Soft Charcoal */
 
 	/* 🎯 Text Colors */
-	--syzygy-text-normal: var(--syzygy-text-normal-setting, #4a4a4a) !important; /* Dark Charcoal */
+	--text-normal: var(--text-normal-setting, #4a4a4a) !important; /* Dark Charcoal */
 	--syzygy-text-muted: var(--syzygy-text-muted-setting, #4b3c3c) !important; /* Earthy Brown */
-	--syzygy-text-accent: var(--syzygy-text-accent-setting, #d19a99) !important; /* Muted Rose */
+	--interactive-accent: var(--interactive-accent-setting, #d19a99) !important; /* Muted Rose */
 	--syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(210, 154, 153, 0.3)) !important; /* Soft Pink Highlight */
 
 	/* 🏆 Headers & Titles */
@@ -196,16 +196,16 @@ settings:
 	--syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace) !important;
 
 	/* 🖌️ UI Elements */
-	--syzygy-radius-small: var(--syzygy-radius-small-setting, 20px) !important;  /* Circular Button */
-	--syzygy-radius-medium: var(--syzygy-radius-medium-setting, 20px) !important;  /* Circular Button */
-	--syzygy-radius-large: var(--syzygy-radius-large-setting, 20px) !important;  /* Circular Button */
+	--radius-s: var(--radius-s-setting, 20px) !important;  /* Circular Button */
+	--radius-m: var(--radius-m-setting, 20px) !important;  /* Circular Button */
+	--radius-l: var(--radius-l-setting, 20px) !important;  /* Circular Button */
 }
 
 /* ✅ Apply Styles */
 body {
 	font-family: var(--syzygy-font-body) !important;
-	background-color: var(--syzygy-bg-primary) !important;
-	color: var(--syzygy-text-normal) !important;
+	background-color: var(--background-primary) !important;
+	color: var(--text-normal) !important;
 }
 
 /* 🎨 Headings */
@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 { color: var(--syzygy-h1-color) !important; font-size: 2.5rem !important; }
 h2 { color: var(--syzygy-h2-color) !important; font-size: 2rem !important; }
 h3 { color: var(--syzygy-h3-color) !important; font-size: 1.75rem !important; }
-h4 { color: var(--syzygy-text-accent) !important; font-size: 1.5rem !important; }
+h4 { color: var(--interactive-accent) !important; font-size: 1.5rem !important; }
 h5 { color: var(--syzygy-text-muted) !important; font-size: 1.25rem !important; }
 h6 { color: var(--syzygy-border) !important; font-size: 1rem !important; }
 
@@ -226,16 +226,16 @@ h6 { color: var(--syzygy-border) !important; font-size: 1rem !important; }
 pre, code {
 	background-color: var(--syzygy-code-bg) !important;
 	color: var(--syzygy-code-text) !important;
-	border-radius: var(--syzygy-radius-medium) !important;
+	border-radius: var(--radius-m) !important;
 	padding: 6px !important;
 	font-family: var(--syzygy-font-code) !important;
 }
 
 /* 🔹 Links */
 a {
-	color: var(--syzygy-text-accent) !important;
+	color: var(--interactive-accent) !important;
 	text-decoration: none !important;
-	border-bottom: 1px solid var(--syzygy-text-accent) !important;
+	border-bottom: 1px solid var(--interactive-accent) !important;
 	transition: all 0.3s ease-in-out !important; /* Smooth Transition */
 }
 
@@ -246,7 +246,7 @@ a:hover {
 
 /* 🚀 Sidebar */
 .sidebar-inner {
-	background-color: var(--syzygy-bg-secondary) !important;
+	background-color: var(--background-secondary) !important;
 	padding: 15px !important;
 	border-right: 2px solid var(--syzygy-border) !important;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Soft Shadow */
@@ -255,14 +255,14 @@ a:hover {
 /* 🔥 Menu Customization */
 .menu {
 	padding: 12px !important;
-	border-radius: var(--syzygy-radius-medium) !important;
-	background-color: var(--syzygy-bg-secondary) !important;
+	border-radius: var(--radius-m) !important;
+	background-color: var(--background-secondary) !important;
 	border: 1px solid var(--syzygy-border) !important;
 }
 
 .menu-item {
 	padding: 10px 14px !important;
-	border-radius: var(--syzygy-radius-small) !important; /* Circular Button */
+	border-radius: var(--radius-s) !important; /* Circular Button */
 	transition: background 0.3s ease-in-out !important; /* Smooth Transition */
 }
 
@@ -272,10 +272,10 @@ a:hover {
 
 /* 🌿 Buttons */
 button {
-	background-color: var(--syzygy-bg-secondary) !important;
-	color: var(--syzygy-text-normal) !important;
+	background-color: var(--background-secondary) !important;
+	color: var(--text-normal) !important;
 	border: 2px solid var(--syzygy-border) !important;
-	border-radius: var(--syzygy-radius-medium) !important; /* Circular Button */
+	border-radius: var(--radius-m) !important; /* Circular Button */
 	padding: 8px 16px !important;
 	font-size: 1rem !important;
 	transition: all 0.3s ease-in-out !important; /* Smooth Transition */
@@ -283,7 +283,7 @@ button {
 
 button:hover {
 	background-color: var(--syzygy-h1-color) !important;
-	color: var(--syzygy-bg-primary) !important;
+	color: var(--background-primary) !important;
 }
 
 /* ✨ Cursor Glow Effect */
@@ -294,57 +294,57 @@ button:hover {
 
 /* ✅ Ensure Higher Specificity */
 html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
-	background-color: var(--syzygy-bg-primary) !important;
-	color: var(--syzygy-text-normal) !important;
+	background-color: var(--background-primary) !important;
+	color: var(--text-normal) !important;
 }
 
 .workspace-tab-header-container {
-  background-color: var(--syzygy-bg-primary);
+  background-color: var(--background-primary);
 }
 
 /* 🔹 Theme Flavors */
 .theme-syzygy-light-biscuit {
-	--syzygy-bg-primary: #f0e4d7;
-	--syzygy-bg-secondary: #e3c8a3;
-	--syzygy-text-normal: #3b3b3b;
-	--syzygy-text-accent: #b07c8f;
+	--background-primary: #f0e4d7;
+	--background-secondary: #e3c8a3;
+	--text-normal: #3b3b3b;
+	--interactive-accent: #b07c8f;
 	--syzygy-border: rgba(80, 80, 80, 0.3);
 }
 .theme-syzygy-light-rosepetal {
-	--syzygy-bg-primary: #f1e8e6;
-	--syzygy-bg-secondary: #dab5b3;
-	--syzygy-text-normal: #4a2b2b;
-	--syzygy-text-accent: #d37d7b;
+	--background-primary: #f1e8e6;
+	--background-secondary: #dab5b3;
+	--text-normal: #4a2b2b;
+	--interactive-accent: #d37d7b;
 	--syzygy-border: rgba(100, 50, 50, 0.3);
 }
 .theme-syzygy-light-emerald {
-	--syzygy-bg-primary: #e3e7d7;
-	--syzygy-bg-secondary: #a8c4a2;
-	--syzygy-text-normal: #3d4b3d;
-	--syzygy-text-accent: #709970;
+	--background-primary: #e3e7d7;
+	--background-secondary: #a8c4a2;
+	--text-normal: #3d4b3d;
+	--interactive-accent: #709970;
 	--syzygy-border: rgba(80, 120, 80, 0.3);
 }
 /* DARK THEME */
  
 .theme-syzygy-dark-moss {
-	--syzygy-bg-primary: #1f2b23;
-	--syzygy-bg-secondary: #3a4a3c;
-	--syzygy-text-normal: #cfdac3;
-	--syzygy-text-accent: #a7c67b;
+	--background-primary: #1f2b23;
+	--background-secondary: #3a4a3c;
+	--text-normal: #cfdac3;
+	--interactive-accent: #a7c67b;
 	--syzygy-border: rgba(180, 220, 140, 0.3);
 }
 .theme-syzygy-dark-eclipse {
-	--syzygy-bg-primary: #13171f;
-	--syzygy-bg-secondary: #262a3b;
-	--syzygy-text-normal: #d9dde9;
-	--syzygy-text-accent: #6b88c7;
+	--background-primary: #13171f;
+	--background-secondary: #262a3b;
+	--text-normal: #d9dde9;
+	--interactive-accent: #6b88c7;
 	--syzygy-border: rgba(100, 120, 180, 0.3);
 }
 .theme-syzygy-dark-lunar {
-	--syzygy-bg-primary: #0d0d0d;
-	--syzygy-bg-secondary: #1a1a1a;
-	--syzygy-text-normal: #e6e6e6;
-	--syzygy-text-accent: #b07c8f;
+	--background-primary: #0d0d0d;
+	--background-secondary: #1a1a1a;
+	--text-normal: #e6e6e6;
+	--interactive-accent: #b07c8f;
 	--syzygy-border: rgba(255, 255, 255, 0.2);
 }
 
@@ -373,7 +373,7 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 
 /* 🔹 H4 Divider Option */
 .theme-syzygy-h4-divider {
-	border-bottom: 2px solid var(--syzygy-text-accent);
+	border-bottom: 2px solid var(--interactive-accent);
 	padding-bottom: 5px;
 	margin-bottom: 10px;
 }
@@ -391,9 +391,9 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 .theme-syzygy-h4-lavender { --syzygy-h4-color: #9c89b8; }
 
 .workspace-tab-header {
-  background: var(--syzygy-bg-secondary);
-  color: var(--syzygy-text-normal);
-  border-radius: var(--syzygy-radius-medium) var(--syzygy-radius-medium) 0 0 !important;
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
   margin-bottom: -2px !important; /* Aligns tab properly */
   transition: background 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -401,30 +401,30 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 /* ✨ Active Tab */
 .workspace-tab-header.is-active {
   background: linear-gradient(135deg, var(--syzygy-h1-color), var(--syzygy-flavor-accent));
-  color: var(--syzygy-bg-primary);
+  color: var(--background-primary);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important; /* Softens bottom edge */
-  border-radius: var(--syzygy-radius-medium) var(--syzygy-radius-medium) 0 0 !important;
+  border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
 }
 /* Fix for gaps between adjacent tabs */
 .workspace-tab-header::before,
 .workspace-tab-header::after {
-  border-radius: var(--syzygy-radius-medium) var(--syzygy-radius-medium) 0 0 !important;
+  border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
   box-shadow: none !important;
 }
 
 /* 🌟 Hover Effect */
 .workspace-tab-header:hover {
   background: var(--syzygy-highlight-bg);
-  color: var(--syzygy-text-accent);
+  color: var(--interactive-accent);
   transform: scale(1.02);
 }
 
 /* 🎨 Sidebar Tabs (to differentiate them) */
 .mod-left-split .workspace-tab-header,
 .mod-right-split .workspace-tab-header {
-  background: var(--syzygy-bg-primary);
+  background: var(--background-primary);
   color: var(--syzygy-text-muted);
-  border-radius: var(--syzygy-radius-medium) var(--syzygy-radius-medium) 0 0 !important;
+  border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
 }
 
 /* 🔹 Tab Title Styling */
@@ -436,8 +436,8 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 
 /* 🔥 Pinned Tabs Stand Out */
 .workspace-tab-header.is-pinned {
-  background: var(--syzygy-text-accent);
-  color: var(--syzygy-bg-primary);
+  background: var(--interactive-accent);
+  color: var(--background-primary);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -470,7 +470,7 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
   --h2-size: var(--h2-size-setting, 2rem);
   --h3-size: var(--h3-size-setting, 1.75rem);
   --h4-size: var(--h4-size-setting, 1.5rem);
-  --h4-divider-color: var(--h4-divider-color-setting, var(--syzygy-text-accent));
+  --h4-divider-color: var(--h4-divider-color-setting, var(--interactive-accent));
   --h4-divider-style: var(--h4-divider-style-setting, solid);
 }
 
@@ -487,7 +487,7 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 /* Adjustable indentation, padding, and line heights */
 .code-block {
   padding: var(--code-block-padding, 6px) !important;
-  border-radius: var(--code-block-radius, var(--syzygy-radius-medium)) !important;
+  border-radius: var(--code-block-radius, var(--radius-m)) !important;
 }
 
 .markdown-list {
@@ -508,7 +508,7 @@ table {
 }
 
 .sidebar {
-  background-color: var(--sidebar-bg, var(--syzygy-bg-secondary)) !important;
+  background-color: var(--sidebar-bg, var(--background-secondary)) !important;
   padding: var(--sidebar-padding, 15px) !important;
 }
 
@@ -559,7 +559,7 @@ table {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: var(--syzygy-bg-secondary);
+  background-color: var(--background-secondary);
 }
 
 
@@ -569,7 +569,7 @@ table {
   justify-content: space-evenly;
   border: 2px solid var(--syzygy-border);
   height: 100%;
-  border-radius: var(--syzygy-radius-medium);
+  border-radius: var(--radius-m);
 }
 
 .side-dock-settings {
@@ -587,7 +587,7 @@ table {
 
 
 .workspace-leaf-resize-handle:hover {
-  background-color: var(--syzygy-text-accent);
-  border-inline-end-color: var(--syzygy-text-accent);
+  background-color: var(--interactive-accent);
+  border-inline-end-color: var(--interactive-accent);
 }
 
