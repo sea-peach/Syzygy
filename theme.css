@@ -199,6 +199,7 @@ settings:
 	--radius-s: var(--radius-s-setting, 20px) !important;  /* Circular Button */
 	--radius-m: var(--radius-m-setting, 20px) !important;  /* Circular Button */
 	--radius-l: var(--radius-l-setting, 20px) !important;  /* Circular Button */
+  --list-marker-color-collapsed: var(--syzygy-flavor-accent) !important;
 }
 
 /* ✅ Apply Styles */
@@ -472,6 +473,7 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
   --h4-size: var(--h4-size-setting, 1.5rem);
   --h4-divider-color: var(--h4-divider-color-setting, var(--interactive-accent));
   --h4-divider-style: var(--h4-divider-style-setting, solid);
+  --interactive-accent: var(--syzygy-flavor-accent);
 }
 
 /* Modular Color Scheme Overrides */
