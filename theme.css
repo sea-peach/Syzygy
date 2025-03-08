@@ -393,7 +393,8 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 .workspace-tab-header {
   background: var(--syzygy-bg-secondary);
   color: var(--syzygy-text-normal);
-  border-radius: var(--syzygy-radius-small);
+  border-radius: var(--syzygy-radius-medium) var(--syzygy-radius-medium) 0 0 !important;
+  margin-bottom: -2px !important; /* Aligns tab properly */
   transition: background 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -401,8 +402,14 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 .workspace-tab-header.is-active {
   background: linear-gradient(135deg, var(--syzygy-h1-color), var(--syzygy-flavor-accent));
   color: var(--syzygy-bg-primary);
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-  border-radius: var(--syzygy-radius-medium);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important; /* Softens bottom edge */
+  border-radius: var(--syzygy-radius-medium) var(--syzygy-radius-medium) 0 0 !important;
+}
+/* Fix for gaps between adjacent tabs */
+.workspace-tab-header::before,
+.workspace-tab-header::after {
+  border-radius: var(--syzygy-radius-medium) var(--syzygy-radius-medium) 0 0 !important;
+  box-shadow: none !important;
 }
 
 /* 🌟 Hover Effect */
@@ -417,7 +424,7 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 .mod-right-split .workspace-tab-header {
   background: var(--syzygy-bg-primary);
   color: var(--syzygy-text-muted);
-  border-radius: var(--syzygy-radius-small);
+  border-radius: var(--syzygy-radius-medium) var(--syzygy-radius-medium) 0 0 !important;
 }
 
 /* 🔹 Tab Title Styling */
