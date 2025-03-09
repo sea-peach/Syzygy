@@ -217,11 +217,11 @@ settings:
   /* Circular Button */
   --radius-l: var(--radius-l-setting, 20px) !important;
   /* Circular Button */
-  --list-marker-color-collapsed: var(--syzygy-flavor-accent) !important;
+  --list-marker-color-collapsed: var(--text-accent) !important;
   /* Ribbon */
-  --ribbon-background: var(--background-primary);
+  --ribbon-background: var(--background-secondary);
   --ribbon-background-collapsed: var(--background-primary);
-  --ribbon-width: 44px;
+  --ribbon-width: 100px !important;
 }
 
 
@@ -424,27 +424,27 @@ body,
 }
 
 .theme-syzygy-accent-pine {
-  --syzygy-flavor-accent: #35524a;
+  --text-accent: #35524a;
 }
 
 .theme-syzygy-accent-sage {
-  --syzygy-flavor-accent: #a7c4a0;
+  --text-accent: #a7c4a0;
 }
 
 .theme-syzygy-accent-brass {
-  --syzygy-flavor-accent: #8c7851;
+  --text-accent: #8c7851;
 }
 
 .theme-syzygy-accent-copper {
-  --syzygy-flavor-accent: #b87333;
+  --text-accent: #b87333;
 }
 
 .theme-syzygy-accent-wine {
-  --syzygy-flavor-accent: #6d1a36;
+  --text-accent: #6d1a36;
 }
 
 .theme-syzygy-accent-lavender {
-  --syzygy-flavor-accent: #9c89b8;
+  --text-accent: #9c89b8;
 }
 
 /* 🔹 H4 Divider Option */
@@ -506,7 +506,7 @@ body,
 
 /* ✨ Active Tab */
 .workspace-tab-header.is-active {
-  background: linear-gradient(135deg, var(--syzygy-h1-color), var(--syzygy-flavor-accent));
+  background: linear-gradient(135deg, var(--syzygy-h1-color), var(--text-accent));
   color: var(--background-primary);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important;
   /* Softens bottom edge */
@@ -580,7 +580,7 @@ body,
   --h4-size: var(--h4-size-setting, 1.5rem);
   --h4-divider-color: var(--h4-divider-color-setting, var(--interactive-accent));
   --h4-divider-style: var(--h4-divider-style-setting, solid);
-  --interactive-accent: var(--syzygy-flavor-accent);
+  --interactive-accent: var(--text-accent);
 }
 
 /* Modular Color Scheme Overrides */
@@ -665,9 +665,18 @@ table {
 
 
 /* RIBBON */
-.side-dock-ribbon {
+.workspace-ribbon {
+  width: var(--ribbon-width);
+  flex: 0 0 var(--ribbon-width);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  background-color: var(--ribbon-background);
+  z-index: var(--layer-sidedock);
+  color: var(--text-muted);
+  padding: var(--ribbon-padding);
+  gap: var(--size-4-1);
+  border-right: var(--divider-width) solid var(--divider-color);
   justify-content: center;
   align-content: center;
 }
