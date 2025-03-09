@@ -169,134 +169,198 @@ settings:
 
 /* 🌑 Syzygy Theme - Personalized, Earthy, and Muted */
 :root {
-	/* 🎨 Background Colors */
-	--background-primary: var(--background-primary-setting, #f0e4d7) !important; /* Warm biscuit */
-	--background-secondary: var(--background-secondary-setting, #b7d5d1) !important; /* Soft Muted Green */
-	--syzygy-border: var(--syzygy-border-setting, rgba(80, 80, 80, 0.3)) !important; /* Soft Charcoal */
+  /* 🎨 Background Colors */
+  --background-primary: var(--background-primary-setting, #f0e4d7) !important;
+  /* Warm biscuit */
+  --background-secondary: var(--background-secondary-setting, #b7d5d1) !important;
+  /* Soft Muted Green */
+  --syzygy-border: var(--syzygy-border-setting, rgba(80, 80, 80, 0.3)) !important;
+  /* Soft Charcoal */
 
-	/* 🎯 Text Colors */
-	--text-normal: var(--text-normal-setting, #4a4a4a) !important; /* Dark Charcoal */
-	--syzygy-text-muted: var(--syzygy-text-muted-setting, #4b3c3c) !important; /* Earthy Brown */
-	--interactive-accent: var(--interactive-accent-setting, #d19a99) !important; /* Muted Rose */
-	--syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(210, 154, 153, 0.3)) !important; /* Soft Pink Highlight */
+  /* 🎯 Text Colors */
+  --text-normal: var(--text-normal-setting, #4a4a4a) !important;
+  /* Dark Charcoal */
+  --syzygy-text-muted: var(--syzygy-text-muted-setting, #4b3c3c) !important;
+  /* Earthy Brown */
+  --interactive-accent: var(--interactive-accent-setting, #d19a99) !important;
+  /* Muted Rose */
+  --syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(210, 154, 153, 0.3)) !important;
+  /* Soft Pink Highlight */
 
-	/* 🏆 Headers & Titles */
-	--syzygy-h1-color: var(--syzygy-h1-color-setting, #d19a99) !important; /* Muted Rose */
-	--syzygy-h2-color: var(--syzygy-h2-color-setting, #4b3c3c) !important; /* Earthy Brown */
-	--syzygy-h3-color: var(--syzygy-h3-color-setting, #b7d5d1) !important; /* Soft Muted Green */
+  /* 🏆 Headers & Titles */
+  --syzygy-h1-color: var(--syzygy-h1-color-setting, #d19a99) !important;
+  /* Muted Rose */
+  --syzygy-h2-color: var(--syzygy-h2-color-setting, #4b3c3c) !important;
+  /* Earthy Brown */
+  --syzygy-h3-color: var(--syzygy-h3-color-setting, #b7d5d1) !important;
+  /* Soft Muted Green */
 
-	/* 🟡 Code Blocks */
-	--syzygy-code-bg: var(--syzygy-code-bg-setting, #f0e4d7) !important; /* Warm biscuit */
-	--syzygy-code-text: var(--syzygy-code-text-setting, #4a4a4a) !important; /* Dark Charcoal */
-	--syzygy-code-comment: var(--syzygy-code-comment-setting, #b7d5d1) !important; /* Soft Muted Green */
+  /* 🟡 Code Blocks */
+  --syzygy-code-bg: var(--syzygy-code-bg-setting, #f0e4d7) !important;
+  /* Warm biscuit */
+  --syzygy-code-text: var(--syzygy-code-text-setting, #4a4a4a) !important;
+  /* Dark Charcoal */
+  --syzygy-code-comment: var(--syzygy-code-comment-setting, #b7d5d1) !important;
+  /* Soft Muted Green */
 
-	/* 🎨 Fonts */
-	--syzygy-font-body: var(--syzygy-font-body-setting, "Merriweather", serif) !important;  /* Vintage Serif */
-	--syzygy-font-heading: var(--syzygy-font-heading-setting, "Merriweather", serif) !important;  /* Vintage Serif */
-	--syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace) !important;
+  /* 🎨 Fonts */
+  --syzygy-font-body: var(--syzygy-font-body-setting, "Merriweather", serif) !important;
+  /* Vintage Serif */
+  --syzygy-font-heading: var(--syzygy-font-heading-setting, "Merriweather", serif) !important;
+  /* Vintage Serif */
+  --syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace) !important;
 
-	/* 🖌️ UI Elements */
-	--radius-s: var(--radius-s-setting, 20px) !important;  /* Circular Button */
-	--radius-m: var(--radius-m-setting, 20px) !important;  /* Circular Button */
-	--radius-l: var(--radius-l-setting, 20px) !important;  /* Circular Button */
+  /* 🖌️ UI Elements */
+  --radius-s: var(--radius-s-setting, 20px) !important;
+  /* Circular Button */
+  --radius-m: var(--radius-m-setting, 20px) !important;
+  /* Circular Button */
+  --radius-l: var(--radius-l-setting, 20px) !important;
+  /* Circular Button */
   --list-marker-color-collapsed: var(--syzygy-flavor-accent) !important;
+  /* Ribbon */
+  --ribbon-background: var(--background-primary);
+  --ribbon-background-collapsed: var(--background-primary);
+  --ribbon-width: 44px;
 }
+
+
 
 /* ✅ Apply Styles */
 body {
-	font-family: var(--syzygy-font-body) !important;
-	background-color: var(--background-primary) !important;
-	color: var(--text-normal) !important;
+  font-family: var(--syzygy-font-body) !important;
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
 }
 
 /* 🎨 Headings */
-h1, h2, h3, h4, h5, h6 {
-	font-family: var(--syzygy-font-heading) !important;
-	font-weight: 600 !important;
-	margin: 0 0 10px !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--syzygy-font-heading) !important;
+  font-weight: 600 !important;
+  margin: 0 0 10px !important;
 }
 
-h1 { color: var(--syzygy-h1-color) !important; font-size: 2.5rem !important; }
-h2 { color: var(--syzygy-h2-color) !important; font-size: 2rem !important; }
-h3 { color: var(--syzygy-h3-color) !important; font-size: 1.75rem !important; }
-h4 { color: var(--interactive-accent) !important; font-size: 1.5rem !important; }
-h5 { color: var(--syzygy-text-muted) !important; font-size: 1.25rem !important; }
-h6 { color: var(--syzygy-border) !important; font-size: 1rem !important; }
+h1 {
+  color: var(--syzygy-h1-color) !important;
+  font-size: 2.5rem !important;
+}
+
+h2 {
+  color: var(--syzygy-h2-color) !important;
+  font-size: 2rem !important;
+}
+
+h3 {
+  color: var(--syzygy-h3-color) !important;
+  font-size: 1.75rem !important;
+}
+
+h4 {
+  color: var(--interactive-accent) !important;
+  font-size: 1.5rem !important;
+}
+
+h5 {
+  color: var(--syzygy-text-muted) !important;
+  font-size: 1.25rem !important;
+}
+
+h6 {
+  color: var(--syzygy-border) !important;
+  font-size: 1rem !important;
+}
 
 /* 🟡 Code Blocks */
-pre, code {
-	background-color: var(--syzygy-code-bg) !important;
-	color: var(--syzygy-code-text) !important;
-	border-radius: var(--radius-m) !important;
-	padding: 6px !important;
-	font-family: var(--syzygy-font-code) !important;
+pre,
+code {
+  background-color: var(--syzygy-code-bg) !important;
+  color: var(--syzygy-code-text) !important;
+  border-radius: var(--radius-m) !important;
+  padding: 6px !important;
+  font-family: var(--syzygy-font-code) !important;
 }
 
 /* 🔹 Links */
 a {
-	color: var(--interactive-accent) !important;
-	text-decoration: none !important;
-	border-bottom: 1px solid var(--interactive-accent) !important;
-	transition: all 0.3s ease-in-out !important; /* Smooth Transition */
+  color: var(--interactive-accent) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--interactive-accent) !important;
+  transition: all 0.3s ease-in-out !important;
+  /* Smooth Transition */
 }
 
 a:hover {
-	color: var(--syzygy-h1-color) !important;
-	border-bottom: 2px solid var(--syzygy-h1-color) !important;
+  color: var(--syzygy-h1-color) !important;
+  border-bottom: 2px solid var(--syzygy-h1-color) !important;
 }
 
 /* 🚀 Sidebar */
 .sidebar-inner {
-	background-color: var(--background-secondary) !important;
-	padding: 15px !important;
-	border-right: 2px solid var(--syzygy-border) !important;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Soft Shadow */
+  background-color: var(--background-secondary) !important;
+  padding: 15px !important;
+  border-right: 2px solid var(--syzygy-border) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  /* Soft Shadow */
 }
 
 /* 🔥 Menu Customization */
 .menu {
-	padding: 12px !important;
-	border-radius: var(--radius-m) !important;
-	background-color: var(--background-secondary) !important;
-	border: 1px solid var(--syzygy-border) !important;
+  padding: 12px !important;
+  border-radius: var(--radius-m) !important;
+  background-color: var(--background-secondary) !important;
+  border: 1px solid var(--syzygy-border) !important;
 }
 
 .menu-item {
-	padding: 10px 14px !important;
-	border-radius: var(--radius-s) !important; /* Circular Button */
-	transition: background 0.3s ease-in-out !important; /* Smooth Transition */
+  padding: 10px 14px !important;
+  border-radius: var(--radius-s) !important;
+  /* Circular Button */
+  transition: background 0.3s ease-in-out !important;
+  /* Smooth Transition */
 }
 
 .menu-item:hover {
-	background: var(--syzygy-highlight-bg) !important;
+  background: var(--syzygy-highlight-bg) !important;
 }
 
 /* 🌿 Buttons */
 button {
-	background-color: var(--background-secondary) !important;
-	color: var(--text-normal) !important;
-	border: 2px solid var(--syzygy-border) !important;
-	border-radius: var(--radius-m) !important; /* Circular Button */
-	padding: 8px 16px !important;
-	font-size: 1rem !important;
-	transition: all 0.3s ease-in-out !important; /* Smooth Transition */
+  background-color: var(--background-secondary) !important;
+  color: var(--text-normal) !important;
+  border: 2px solid var(--syzygy-border) !important;
+  border-radius: var(--radius-m) !important;
+  /* Circular Button */
+  padding: 8px 16px !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease-in-out !important;
+  /* Smooth Transition */
 }
 
 button:hover {
-	background-color: var(--syzygy-h1-color) !important;
-	color: var(--background-primary) !important;
+  background-color: var(--syzygy-h1-color) !important;
+  color: var(--background-primary) !important;
 }
 
 /* ✨ Cursor Glow Effect */
 * {
-	cursor: url("https://your-hosted-cursor-url.cur"), auto !important;
+  cursor: url("https://your-hosted-cursor-url.cur"), auto !important;
   box-sizing: border-box;
 }
 
 /* ✅ Ensure Higher Specificity */
-html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
-	background-color: var(--background-primary) !important;
-	color: var(--text-normal) !important;
+html,
+body,
+.workspace,
+.workspace-split,
+.workspace-leaf,
+.theme-dark {
+  background-color: var(--background-primary) !important;
+  color: var(--text-normal) !important;
 }
 
 .workspace-tab-header-container {
@@ -305,97 +369,138 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 
 /* 🔹 Theme Flavors */
 .theme-syzygy-light-biscuit {
-	--background-primary: #f0e4d7;
-	--background-secondary: #e3c8a3;
-	--text-normal: #3b3b3b;
-	--interactive-accent: #b07c8f;
-	--syzygy-border: rgba(80, 80, 80, 0.3);
+  --background-primary: #f0e4d7;
+  --background-secondary: #e3c8a3;
+  --text-normal: #3b3b3b;
+  --interactive-accent: #b07c8f;
+  --syzygy-border: rgba(80, 80, 80, 0.3);
 }
+
 .theme-syzygy-light-rosepetal {
-	--background-primary: #f1e8e6;
-	--background-secondary: #dab5b3;
-	--text-normal: #4a2b2b;
-	--interactive-accent: #d37d7b;
-	--syzygy-border: rgba(100, 50, 50, 0.3);
+  --background-primary: #f1e8e6;
+  --background-secondary: #dab5b3;
+  --text-normal: #4a2b2b;
+  --interactive-accent: #d37d7b;
+  --syzygy-border: rgba(100, 50, 50, 0.3);
 }
+
 .theme-syzygy-light-emerald {
-	--background-primary: #e3e7d7;
-	--background-secondary: #a8c4a2;
-	--text-normal: #3d4b3d;
-	--interactive-accent: #709970;
-	--syzygy-border: rgba(80, 120, 80, 0.3);
+  --background-primary: #e3e7d7;
+  --background-secondary: #a8c4a2;
+  --text-normal: #3d4b3d;
+  --interactive-accent: #709970;
+  --syzygy-border: rgba(80, 120, 80, 0.3);
 }
+
 /* DARK THEME */
- 
+
 .theme-syzygy-dark-moss {
-	--background-primary: #1f2b23;
-	--background-secondary: #3a4a3c;
-	--text-normal: #cfdac3;
-	--interactive-accent: #a7c67b;
-	--syzygy-border: rgba(180, 220, 140, 0.3);
+  --background-primary: #1f2b23;
+  --background-secondary: #3a4a3c;
+  --text-normal: #cfdac3;
+  --interactive-accent: #a7c67b;
+  --syzygy-border: rgba(180, 220, 140, 0.3);
 }
+
 .theme-syzygy-dark-eclipse {
-	--background-primary: #13171f;
-	--background-secondary: #262a3b;
-	--text-normal: #d9dde9;
-	--interactive-accent: #6b88c7;
-	--syzygy-border: rgba(100, 120, 180, 0.3);
+  --background-primary: #13171f;
+  --background-secondary: #262a3b;
+  --text-normal: #d9dde9;
+  --interactive-accent: #6b88c7;
+  --syzygy-border: rgba(100, 120, 180, 0.3);
 }
+
 .theme-syzygy-dark-lunar {
-	--background-primary: #0d0d0d;
-	--background-secondary: #1a1a1a;
-	--text-normal: #e6e6e6;
-	--interactive-accent: #b07c8f;
-	--syzygy-border: rgba(255, 255, 255, 0.2);
+  --background-primary: #0d0d0d;
+  --background-secondary: #1a1a1a;
+  --text-normal: #e6e6e6;
+  --interactive-accent: #b07c8f;
+  --syzygy-border: rgba(255, 255, 255, 0.2);
 }
 
 /* 🎨 Theme Accents */
 .theme-syzygy-accent-rose {
-	--syzygy-flavor-accent: #d19a99;
+  --syzygy-iaccent: #d19a99;
 }
+
 .theme-syzygy-accent-pine {
-	--syzygy-flavor-accent: #35524a;
+  --syzygy-flavor-accent: #35524a;
 }
+
 .theme-syzygy-accent-sage {
-	--syzygy-flavor-accent: #a7c4a0;
+  --syzygy-flavor-accent: #a7c4a0;
 }
+
 .theme-syzygy-accent-brass {
-	--syzygy-flavor-accent: #8c7851;
+  --syzygy-flavor-accent: #8c7851;
 }
+
 .theme-syzygy-accent-copper {
-	--syzygy-flavor-accent: #b87333;
+  --syzygy-flavor-accent: #b87333;
 }
+
 .theme-syzygy-accent-wine {
-	--syzygy-flavor-accent: #6d1a36;
+  --syzygy-flavor-accent: #6d1a36;
 }
+
 .theme-syzygy-accent-lavender {
-	--syzygy-flavor-accent: #9c89b8;
+  --syzygy-flavor-accent: #9c89b8;
 }
 
 /* 🔹 H4 Divider Option */
 .theme-syzygy-h4-divider {
-	border-bottom: 2px solid var(--interactive-accent);
-	padding-bottom: 5px;
-	margin-bottom: 10px;
+  border-bottom: 2px solid var(--interactive-accent);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 /* 🔠 H4 Custom Colors */
-.theme-syzygy-h4-red { --syzygy-h4-color: #d32f2f; }
-.theme-syzygy-h4-maroon { --syzygy-h4-color: #800000; }
-.theme-syzygy-h4-peach { --syzygy-h4-color: #ffab91; }
-.theme-syzygy-h4-yellow { --syzygy-h4-color: #fdd835; }
-.theme-syzygy-h4-green { --syzygy-h4-color: #4caf50; }
-.theme-syzygy-h4-teal { --syzygy-h4-color: #00897b; }
-.theme-syzygy-h4-sky { --syzygy-h4-color: #81d4fa; }
-.theme-syzygy-h4-sapphire { --syzygy-h4-color: #0f52ba; }
-.theme-syzygy-h4-blue { --syzygy-h4-color: #1976d2; }
-.theme-syzygy-h4-lavender { --syzygy-h4-color: #9c89b8; }
+.theme-syzygy-h4-red {
+  --syzygy-h4-color: #d32f2f;
+}
+
+.theme-syzygy-h4-maroon {
+  --syzygy-h4-color: #800000;
+}
+
+.theme-syzygy-h4-peach {
+  --syzygy-h4-color: #ffab91;
+}
+
+.theme-syzygy-h4-yellow {
+  --syzygy-h4-color: #fdd835;
+}
+
+.theme-syzygy-h4-green {
+  --syzygy-h4-color: #4caf50;
+}
+
+.theme-syzygy-h4-teal {
+  --syzygy-h4-color: #00897b;
+}
+
+.theme-syzygy-h4-sky {
+  --syzygy-h4-color: #81d4fa;
+}
+
+.theme-syzygy-h4-sapphire {
+  --syzygy-h4-color: #0f52ba;
+}
+
+.theme-syzygy-h4-blue {
+  --syzygy-h4-color: #1976d2;
+}
+
+.theme-syzygy-h4-lavender {
+  --syzygy-h4-color: #9c89b8;
+}
 
 .workspace-tab-header {
   background: var(--background-secondary);
   color: var(--text-normal);
   border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
-  margin-bottom: -2px !important; /* Aligns tab properly */
+  margin-bottom: -2px !important;
+  /* Aligns tab properly */
   transition: background 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -403,9 +508,11 @@ html, body, .workspace, .workspace-split, .workspace-leaf, .theme-dark {
 .workspace-tab-header.is-active {
   background: linear-gradient(135deg, var(--syzygy-h1-color), var(--syzygy-flavor-accent));
   color: var(--background-primary);
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important; /* Softens bottom edge */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important;
+  /* Softens bottom edge */
   border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
 }
+
 /* Fix for gaps between adjacent tabs */
 .workspace-tab-header::before,
 .workspace-tab-header::after {
@@ -516,7 +623,8 @@ table {
 
 /* End of Modular Enhancements */
 
-.theme-light.syzygy-light-biscuit, .syzygy-light-biscuit .themed-color-wrapper > .theme-light {
+.theme-light.syzygy-light-biscuit,
+.syzygy-light-biscuit .themed-color-wrapper>.theme-light {
   --syz-rose: var(--syz-custom-rose, var(--syz-ext-rose, 224, 153, 149));
   --syz-pine: var(--syz-custom-pine, var(--syz-ext-pine, 86, 148, 139));
   --syz-sage: var(--syz-custom-sage, var(--syz-ext-sage, 148, 178, 130));
@@ -535,7 +643,8 @@ table {
   --syz-crust: var(--syz-custom-crust, var(--syz-ext-crust, 221, 208, 198));
 }
 
-.theme-dark.syzygy-dark-moss, .syzygy-dark-moss .themed-color-wrapper > .theme-dark {
+.theme-dark.syzygy-dark-moss,
+.syzygy-dark-moss .themed-color-wrapper>.theme-dark {
   --syz-rose: var(--syz-custom-rose, var(--syz-ext-rose, 224, 153, 149));
   --syz-pine: var(--syz-custom-pine, var(--syz-ext-pine, 86, 148, 139));
   --syz-sage: var(--syz-custom-sage, var(--syz-ext-sage, 148, 178, 130));
@@ -561,7 +670,6 @@ table {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: var(--background-secondary);
 }
 
 
@@ -583,7 +691,7 @@ table {
 }
 
 .side-dock-ribbon-action:hover {
-  border: 2px solid var(--syzygy-flavor-accent);
+  border: 2px outset var(--interactive-accent);
 }
 
 
@@ -596,7 +704,8 @@ table {
 /* 🌿 Styled Lists for Syzygy Theme */
 
 /* 🔹 General List Spacing & Indentation */
-ul, ol {
+ul,
+ol {
   padding-left: var(--list-indent);
   margin: var(--list-spacing) 0;
   line-height: 1.6;
@@ -604,11 +713,13 @@ ul, ol {
 
 /* 📌 Bullet & Numbered List Styling */
 ul {
-  list-style: none; /* Remove default bullets */
+  list-style: none;
+  /* Remove default bullets */
 }
 
-ul > li::before {
-  content: "•"; /* Custom bullet symbol */
+ul>li::before {
+  content: "•";
+  /* Custom bullet symbol */
   color: var(--list-marker-color);
   font-size: var(--list-bullet-size);
   font-weight: bold;
@@ -617,20 +728,22 @@ ul > li::before {
   margin-left: -1.3rem;
 }
 
-ul > li:hover::before {
+ul>li:hover::before {
   color: var(--list-marker-color-hover);
   transition: color 0.2s ease-in-out;
 }
 
 /* 🟢 Collapsible Lists (Hover Effect for Indicators) */
-ul > li.task-list-item[data-task=""]::before {
-  content: "⏷"; /* Default collapsed icon */
+ul>li.task-list-item[data-task=""]::before {
+  content: "⏷";
+  /* Default collapsed icon */
   font-size: 0.8em;
   color: var(--list-marker-color-collapsed);
 }
 
-ul > li.task-list-item[data-task="open"]::before {
-  content: "⏶"; /* Opened icon */
+ul>li.task-list-item[data-task="open"]::before {
+  content: "⏶";
+  /* Opened icon */
 }
 
 /* 🔢 Numbered Lists */
@@ -639,20 +752,19 @@ ol {
   padding-left: var(--list-indent);
 }
 
-ol > li {
+ol>li {
   padding-left: var(--list-bullet-end-padding);
 }
 
 /* ✨ Hover Interaction */
-ol > li:hover,
-ul > li:hover {
+ol>li:hover,
+ul>li:hover {
   color: var(--interactive-accent);
 }
 
 /* 🎯 Bullet Shape Customization */
-ul > li::before {
+ul>li::before {
   border: var(--list-bullet-border);
   border-radius: var(--list-bullet-radius);
   transform: var(--list-bullet-transform);
 }
-
