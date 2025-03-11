@@ -178,7 +178,7 @@ settings:
   --text-normal: var(--color-base-100) !important;
   --syzygy-text-muted: var(--color-base-70) !important;
   --interactive-normal: var(--color-red) !important;
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
+
 
   /* 🏆 Headers & Titles */
   --syzygy-h1-color: var(--color-red) !important;
@@ -361,6 +361,7 @@ body,
 }
 
 .theme-syzygy-light-biscuit {
+
   --color-base-00: #fffaf3;
   --color-base-05: #fef5eb;
   --color-base-10: #f0e4d7;
@@ -382,6 +383,8 @@ body,
     --color-blue: #728bbd;
     --color-purple: #a38ac7;
     --color-pink: #d19a99;
+
+    --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   
     --color-red-rgb: 217, 108, 104;
     --color-orange-rgb: 230, 161, 93;
@@ -406,6 +409,8 @@ body,
   --color-base-60: #5a3b3a;
   --color-base-70: #4a2b2b;
   --color-base-100: #382020;
+
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
 
   --color-red: #d37d7b;
   --color-orange: #e6a56b;
@@ -449,6 +454,8 @@ body,
   --color-purple: #9388b3;
   --color-pink: #d79aa3;
 
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
+
   --color-red-rgb: 209, 118, 114;
   --color-orange-rgb: 214, 167, 111;
   --color-yellow-rgb: 230, 200, 122;
@@ -483,6 +490,8 @@ body,
   --color-purple: #9d86b6;
   --color-pink: #c48b96;
 
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
+
   --color-red-rgb: 176, 93, 90;
   --color-orange-rgb: 196, 135, 93;
   --color-yellow-rgb: 196, 163, 93;
@@ -516,6 +525,8 @@ body,
   --color-purple: #9d86b6;
   --color-pink: #c48b96;
 
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
+
   --color-red-rgb: 176, 93, 93;
   --color-orange-rgb: 196, 135, 95;
   --color-yellow-rgb: 196, 163, 96;
@@ -539,6 +550,8 @@ body,
   --color-base-60: #666666;
   --color-base-70: #737373;
   --color-base-100: #e6e6e6;
+
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
 
   --color-red: #9c4d4d;
   --color-orange: #ac6b4d;
