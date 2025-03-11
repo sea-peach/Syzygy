@@ -170,54 +170,47 @@ settings:
 /* 🌑 Syzygy Theme - Personalized, Earthy, and Muted */
 :root {
   /* 🎨 Background Colors */
-  --background-primary: var(--background-primary-setting, #f0e4d7) !important;
-  /* Warm biscuit */
-  --background-secondary: var(--background-secondary-setting, #b7d5d1) !important;
-  /* Soft Muted Green */
-  --syzygy-border: var(--syzygy-border-setting, rgba(80, 80, 80, 0.3)) !important;
-  /* Soft Charcoal */
+  --background-primary: var(--color-base-10) !important;
+  --background-secondary: var(--color-base-20) !important;
+  --syzygy-border: rgba(var(--color-base-40-rgb), 0.3) !important;
 
   /* 🎯 Text Colors */
-  --text-normal: var(--text-normal-setting, #4a4a4a) !important;
-  /* Dark Charcoal */
-  --syzygy-text-muted: var(--syzygy-text-muted-setting, #4b3c3c) !important;
-  /* Earthy Brown */
-  --interactive-accent: var(--interactive-accent-setting, #d19a99) !important;
-  /* Muted Rose */
-  --syzygy-highlight-bg: var(--syzygy-highlight-bg-setting, rgba(210, 154, 153, 0.3)) !important;
-  /* Soft Pink Highlight */
+  --text-normal: var(--color-base-100) !important;
+  --syzygy-text-muted: var(--color-base-70) !important;
+  --interactive-normal: var(--color-red) !important;
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
 
   /* 🏆 Headers & Titles */
-  --syzygy-h1-color: var(--syzygy-h1-color-setting, #d19a99) !important;
-  /* Muted Rose */
-  --syzygy-h2-color: var(--syzygy-h2-color-setting, #4b3c3c) !important;
-  /* Earthy Brown */
-  --syzygy-h3-color: var(--syzygy-h3-color-setting, #b7d5d1) !important;
-  /* Soft Muted Green */
+  --syzygy-h1-color: var(--color-red) !important;
+  --syzygy-h2-color: var(--color-orange) !important;
+  --syzygy-h3-color: var(--color-green) !important;
 
   /* 🟡 Code Blocks */
-  --syzygy-code-bg: var(--syzygy-code-bg-setting, #f0e4d7) !important;
-  /* Warm biscuit */
-  --syzygy-code-text: var(--syzygy-code-text-setting, #4a4a4a) !important;
-  /* Dark Charcoal */
-  --syzygy-code-comment: var(--syzygy-code-comment-setting, #b7d5d1) !important;
-  /* Soft Muted Green */
+  --syzygy-code-bg: var(--color-base-05) !important;
+  --syzygy-code-text: var(--color-base-100) !important;
+  --syzygy-code-comment: var(--color-cyan) !important;
 
   /* 🎨 Fonts */
   --syzygy-font-body: var(--syzygy-font-body-setting, "Merriweather", serif) !important;
-  /* Vintage Serif */
   --syzygy-font-heading: var(--syzygy-font-heading-setting, "Merriweather", serif) !important;
-  /* Vintage Serif */
   --syzygy-font-code: var(--syzygy-font-code-setting, "Fira Code", monospace) !important;
 
   /* 🖌️ UI Elements */
   --radius-s: var(--radius-s-setting, 20px) !important;
-  /* Circular Button */
   --radius-m: var(--radius-m-setting, 20px) !important;
-  /* Circular Button */
   --radius-l: var(--radius-l-setting, 20px) !important;
-  /* Circular Button */
   --list-marker-color-collapsed: var(--text-accent) !important;
+  --ribbon-background: var(--background-secondary);
+  --ribbon-background-collapsed: var(--background-primary);
+  --ribbon-width: 100px !important;
+  
+  /* 🎨 Borders & Messages */
+  --background-modifier-border-hover: var(--color-base-35);
+  --background-modifier-border-focus: var(--color-base-40);
+  --background-modifier-error: var(--color-red);
+  --background-modifier-success: var(--color-green);
+  --background-modifier-message: rgba(var(--mono-rgb-0), 0.9);
+
   /* Ribbon */
   --ribbon-background: var(--background-secondary);
   --ribbon-background-collapsed: var(--background-primary);
@@ -261,7 +254,7 @@ h3 {
 }
 
 h4 {
-  color: var(--interactive-accent) !important;
+  color: var(--interactive-normal) !important;
   font-size: 1.5rem !important;
 }
 
@@ -287,9 +280,9 @@ code {
 
 /* 🔹 Links */
 a {
-  color: var(--interactive-accent) !important;
+  color: var(--link-color) !important;
   text-decoration: none !important;
-  border-bottom: 1px solid var(--interactive-accent) !important;
+  border-bottom: 1px solid var(--interactive-normal) !important;
   transition: all 0.3s ease-in-out !important;
   /* Smooth Transition */
 }
@@ -325,7 +318,7 @@ a:hover {
 }
 
 .menu-item:hover {
-  background: var(--syzygy-highlight-bg) !important;
+  background: var(--background-modifier-hover) !important;
 }
 
 /* 🌿 Buttons */
@@ -367,89 +360,392 @@ body,
   background-color: var(--background-primary);
 }
 
-/* 🔹 Theme Flavors */
 .theme-syzygy-light-biscuit {
-  --background-primary: #f0e4d7;
-  --background-secondary: #e3c8a3;
-  --text-normal: #3b3b3b;
-  --interactive-accent: #b07c8f;
-  --syzygy-border: rgba(80, 80, 80, 0.3);
+  --color-base-00: #fffaf3;
+  --color-base-05: #fef5eb;
+  --color-base-10: #f0e4d7;
+  --color-base-20: #e3c8a3;
+  --color-base-25: #d4b28f;
+  --color-base-30: #c9a37d;
+  --color-base-35: #b9956c;
+  --color-base-40: #a67f57;
+  --color-base-50: #8c6b45;
+  --color-base-60: #70593b;
+  --color-base-70: #5a4730;
+  --color-base-100: #3b3b3b;
+    /* Extended Colors */
+    --color-red: #d96c68;
+    --color-orange: #e6a15d;
+    --color-yellow: #e8c36b;
+    --color-green: #80a665;
+    --color-cyan: #7abfbf;
+    --color-blue: #728bbd;
+    --color-purple: #a38ac7;
+    --color-pink: #d19a99;
+  
+    --color-red-rgb: 217, 108, 104;
+    --color-orange-rgb: 230, 161, 93;
+    --color-yellow-rgb: 232, 195, 107;
+    --color-green-rgb: 128, 166, 101;
+    --color-cyan-rgb: 122, 191, 191;
+    --color-blue-rgb: 114, 139, 189;
+    --color-purple-rgb: 163, 138, 199;
+    --color-pink-rgb: 209, 154, 153;
 }
 
 .theme-syzygy-light-rosepetal {
-  --background-primary: #f1e8e6;
-  --background-secondary: #dab5b3;
-  --text-normal: #4a2b2b;
-  --interactive-accent: #d37d7b;
-  --syzygy-border: rgba(100, 50, 50, 0.3);
+  --color-base-00: #fdf5f4;
+  --color-base-05: #fbecea;
+  --color-base-10: #f1e8e6;
+  --color-base-20: #dab5b3;
+  --color-base-25: #c49c9a;
+  --color-base-30: #b28685;
+  --color-base-35: #9d6f6f;
+  --color-base-40: #865d5c;
+  --color-base-50: #704a49;
+  --color-base-60: #5a3b3a;
+  --color-base-70: #4a2b2b;
+  --color-base-100: #382020;
+
+  --color-red: #d37d7b;
+  --color-orange: #e6a56b;
+  --color-yellow: #e8c78f;
+  --color-green: #89b38b;
+  --color-cyan: #88c5c5;
+  --color-blue: #829bc5;
+  --color-purple: #b393c9;
+  --color-pink: #e0a4a3;
+
+  --color-red-rgb: 211, 125, 123;
+  --color-orange-rgb: 230, 165, 107;
+  --color-yellow-rgb: 232, 199, 143;
+  --color-green-rgb: 137, 179, 139;
+  --color-cyan-rgb: 136, 197, 197;
+  --color-blue-rgb: 130, 155, 197;
+  --color-purple-rgb: 179, 147, 201;
+  --color-pink-rgb: 224, 164, 163;
 }
 
 .theme-syzygy-light-emerald {
-  --background-primary: #e3e7d7;
-  --background-secondary: #a8c4a2;
-  --text-normal: #3d4b3d;
-  --interactive-accent: #709970;
-  --syzygy-border: rgba(80, 120, 80, 0.3);
+  --color-base-00: #f5faf5;
+  --color-base-05: #edf5ed;
+  --color-base-10: #e3e7d7;
+  --color-base-20: #a8c4a2;
+  --color-base-25: #8eb389;
+  --color-base-30: #7aa376;
+  --color-base-35: #6b9265;
+  --color-base-40: #5b7e55;
+  --color-base-50: #4a6b45;
+  --color-base-60: #3d5a3d;
+  --color-base-70: #2e4932;
+  --color-base-100: #1e3725;
+
+  --color-red: #d17672;
+  --color-orange: #d6a76f;
+  --color-yellow: #e6c87a;
+  --color-green: #76b172;
+  --color-cyan: #6cbfb4;
+  --color-blue: #6a92b1;
+  --color-purple: #9388b3;
+  --color-pink: #d79aa3;
+
+  --color-red-rgb: 209, 118, 114;
+  --color-orange-rgb: 214, 167, 111;
+  --color-yellow-rgb: 230, 200, 122;
+  --color-green-rgb: 118, 177, 114;
+  --color-cyan-rgb: 108, 191, 180;
+  --color-blue-rgb: 106, 146, 177;
+  --color-purple-rgb: 147, 136, 179;
+  --color-pink-rgb: 215, 154, 163;
 }
 
 /* DARK THEME */
 
 .theme-syzygy-dark-moss {
-  --background-primary: #1f2b23;
-  --background-secondary: #3a4a3c;
-  --text-normal: #cfdac3;
-  --interactive-accent: #a7c67b;
-  --syzygy-border: rgba(180, 220, 140, 0.3);
+  --color-base-00: #1b251e;
+  --color-base-05: #1f2b23;
+  --color-base-10: #29372c;
+  --color-base-20: #3a4a3c;
+  --color-base-25: #4a5e4e;
+  --color-base-30: #5a725f;
+  --color-base-35: #6b8672;
+  --color-base-40: #7c9a85;
+  --color-base-50: #8fad98;
+  --color-base-60: #a1c0ab;
+  --color-base-70: #b4d4bf;
+  --color-base-100: #cfdac3;
+  --color-red: #b05d5a;
+  --color-orange: #c4875d;
+  --color-yellow: #c4a35d;
+  --color-green: #8fb78a;
+  --color-cyan: #76a79f;
+  --color-blue: #7a9bb8;
+  --color-purple: #9d86b6;
+  --color-pink: #c48b96;
+
+  --color-red-rgb: 176, 93, 90;
+  --color-orange-rgb: 196, 135, 93;
+  --color-yellow-rgb: 196, 163, 93;
+  --color-green-rgb: 143, 183, 138;
+  --color-cyan-rgb: 118, 167, 159;
+  --color-blue-rgb: 122, 155, 184;
+  --color-purple-rgb: 157, 134, 182;
+  --color-pink-rgb: 196, 139, 150;
 }
 
 .theme-syzygy-dark-eclipse {
-  --background-primary: #13171f;
-  --background-secondary: #262a3b;
-  --text-normal: #d9dde9;
-  --interactive-accent: #6b88c7;
-  --syzygy-border: rgba(100, 120, 180, 0.3);
+  --color-base-00: #0e121a;
+  --color-base-05: #13171f;
+  --color-base-10: #1a1e27;
+  --color-base-20: #262a3b;
+  --color-base-25: #2f334a;
+  --color-base-30: #3a3f59;
+  --color-base-35: #474c69;
+  --color-base-40: #555a78;
+  --color-base-50: #646888;
+  --color-base-60: #757899;
+  --color-base-70: #8789aa;
+  --color-base-100: #d9dde9;
+
+  --color-red: #b05d5d;
+  --color-orange: #c4875f;
+  --color-yellow: #c4a360;
+  --color-green: #8fb789;
+  --color-cyan: #76a79e;
+  --color-blue: #7a9bb9;
+  --color-purple: #9d86b6;
+  --color-pink: #c48b96;
+
+  --color-red-rgb: 176, 93, 93;
+  --color-orange-rgb: 196, 135, 95;
+  --color-yellow-rgb: 196, 163, 96;
+  --color-green-rgb: 143, 183, 137;
+  --color-cyan-rgb: 118, 167, 158;
+  --color-blue-rgb: 122, 155, 185;
+  --color-purple-rgb: 157, 134, 182;
+  --color-pink-rgb: 196, 139, 150;
 }
 
 .theme-syzygy-dark-lunar {
-  --background-primary: #0d0d0d;
-  --background-secondary: #1a1a1a;
-  --text-normal: #e6e6e6;
-  --interactive-accent: #b07c8f;
-  --syzygy-border: rgba(255, 255, 255, 0.2);
+  --color-base-00: #0b0b0b;
+  --color-base-05: #0d0d0d;
+  --color-base-10: #111111;
+  --color-base-20: #1a1a1a;
+  --color-base-25: #262626;
+  --color-base-30: #333333;
+  --color-base-35: #404040;
+  --color-base-40: #4d4d4d;
+  --color-base-50: #595959;
+  --color-base-60: #666666;
+  --color-base-70: #737373;
+  --color-base-100: #e6e6e6;
+
+  --color-red: #9c4d4d;
+  --color-orange: #ac6b4d;
+  --color-yellow: #b29a4d;
+  --color-green: #7ca36d;
+  --color-cyan: #5f9794;
+  --color-blue: #6c8ca3;
+  --color-purple: #8f76a3;
+  --color-pink: #b16b8a;
+
+  --color-red-rgb: 156, 77, 77;
+  --color-orange-rgb: 172, 107, 77;
+  --color-yellow-rgb: 178, 154, 77;
+  --color-green-rgb: 124, 163, 109;
+  --color-cyan-rgb: 95, 151, 148;
+  --color-blue-rgb: 108, 140, 163;
+  --color-purple-rgb: 143, 118, 163;
+  --color-pink-rgb: 177, 107, 138;
 }
+
 
 /* 🎨 Theme Accents */
 .theme-syzygy-accent-rose {
-  --syzygy-iaccent: #d19a99;
+  --text-accent: #d19a99;
+  --accent-h: 350;
+  --accent-s: 60%;
+  --accent-l: 65%;
+  --heading-formatting: #d19a99;
+  --h1-color: #d19a99;
+  --h2-color: #b07c8f;
+  --h3-color: #a06070;
+  --h4-color: #905060;
+  --h5-color: #804050;
+  --h6-color: #703040;
+  --h1-font: "Playfair Display", serif;
+  --h2-font: "Playfair Display", serif;
+  --h3-font: "Cormorant Garamond", serif;
+  --h4-font: "Cormorant Garamond", serif;
+  --h5-font: "Cormorant Garamond", serif;
+  --h6-font: "Cormorant Garamond", serif;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h5-weight: 400;
+  --h6-weight: 400;
 }
 
 .theme-syzygy-accent-pine {
   --text-accent: #35524a;
+  --accent-h: 160;
+  --accent-s: 50%;
+  --accent-l: 45%;
+  --heading-formatting: #35524a;
+  --h1-color: #35524a;
+  --h2-color: #2a423e;
+  --h3-color: #1f322e;
+  --h4-color: #14221e;
+  --h5-color: #0a120e;
+  --h6-color: #050a06;
+  --h1-font: "Playfair Display", serif;
+  --h2-font: "Playfair Display", serif;
+  --h3-font: "Inter", sans-serif;
+  --h4-font: "Inter", sans-serif;
+  --h5-font: "Inter", sans-serif;
+  --h6-font: "Inter", sans-serif;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h5-weight: 400;
+  --h6-weight: 400;
 }
 
 .theme-syzygy-accent-sage {
   --text-accent: #a7c4a0;
+  --accent-h: 100;
+  --accent-s: 35%;
+  --accent-l: 60%;
+  --heading-formatting: #a7c4a0;
+  --h1-color: #a7c4a0;
+  --h2-color: #89a386;
+  --h3-color: #71856e;
+  --h4-color: #5a6757;
+  --h5-color: #43503f;
+  --h6-color: #2c3a27;
+  --h1-font: "Playfair Display", serif;
+  --h2-font: "Playfair Display", serif;
+  --h3-font: "Inter", sans-serif;
+  --h4-font: "Inter", sans-serif;
+  --h5-font: "Inter", sans-serif;
+  --h6-font: "Inter", sans-serif;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h5-weight: 400;
+  --h6-weight: 400;
 }
 
 .theme-syzygy-accent-brass {
   --text-accent: #8c7851;
+  --accent-h: 40;
+  --accent-s: 55%;
+  --accent-l: 50%;
+  --heading-formatting: #8c7851;
+  --h1-color: #8c7851;
+  --h2-color: #7a6847;
+  --h3-color: #68583d;
+  --h4-color: #564833;
+  --h5-color: #443829;
+  --h6-color: #32281f;
+  --h1-font: "Playfair Display", serif;
+  --h2-font: "Playfair Display", serif;
+  --h3-font: "Georgia", serif;
+  --h4-font: "Georgia", serif;
+  --h5-font: "Georgia", serif;
+  --h6-font: "Georgia", serif;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h5-weight: 400;
+  --h6-weight: 400;
 }
 
 .theme-syzygy-accent-copper {
   --text-accent: #b87333;
+  --accent-h: 28;
+  --accent-s: 65%;
+  --accent-l: 50%;
+  --heading-formatting: #b87333;
+  --h1-color: #b87333;
+  --h2-color: #9e632b;
+  --h3-color: #8a5323;
+  --h4-color: #76431b;
+  --h5-color: #623313;
+  --h6-color: #4e230b;
+  --h1-font: "Playfair Display", serif;
+  --h2-font: "Playfair Display", serif;
+  --h3-font: "Georgia", serif;
+  --h4-font: "Georgia", serif;
+  --h5-font: "Georgia", serif;
+  --h6-font: "Georgia", serif;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h5-weight: 400;
+  --h6-weight: 400;
 }
 
 .theme-syzygy-accent-wine {
   --text-accent: #6d1a36;
+  --accent-h: 345;
+  --accent-s: 55%;
+  --accent-l: 40%;
+  --heading-formatting: #6d1a36;
+  --h1-color: #6d1a36;
+  --h2-color: #5c162e;
+  --h3-color: #4a1226;
+  --h4-color: #390e1e;
+  --h5-color: #270a16;
+  --h6-color: #16060e;
+  --h1-font: "Playfair Display", serif;
+  --h2-font: "Playfair Display", serif;
+  --h3-font: "Cormorant Garamond", serif;
+  --h4-font: "Cormorant Garamond", serif;
+  --h5-font: "Cormorant Garamond", serif;
+  --h6-font: "Cormorant Garamond", serif;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h5-weight: 400;
+  --h6-weight: 400;
 }
 
 .theme-syzygy-accent-lavender {
   --text-accent: #9c89b8;
+  --accent-h: 260;
+  --accent-s: 40%;
+  --accent-l: 65%;
+  --heading-formatting: #9c89b8;
+  --h1-color: #9c89b8;
+  --h2-color: #8879a3;
+  --h3-color: #74698e;
+  --h4-color: #605979;
+  --h5-color: #4c4964;
+  --h6-color: #38394f;
+  --h1-font: "Playfair Display", serif;
+  --h2-font: "Playfair Display", serif;
+  --h3-font: "Cormorant Garamond", serif;
+  --h4-font: "Cormorant Garamond", serif;
+  --h5-font: "Cormorant Garamond", serif;
+  --h6-font: "Cormorant Garamond", serif;
+  --h1-weight: 700;
+  --h2-weight: 600;
+  --h3-weight: 500;
+  --h4-weight: 500;
+  --h5-weight: 400;
+  --h6-weight: 400;
 }
 
 /* 🔹 H4 Divider Option */
 .theme-syzygy-h4-divider {
-  border-bottom: 2px solid var(--interactive-accent);
+  border-bottom: 2px solid var(--interactive-normal);
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
@@ -506,7 +802,7 @@ body,
 
 /* ✨ Active Tab */
 .workspace-tab-header.is-active {
-  background: linear-gradient(135deg, var(--syzygy-h1-color), var(--text-accent));
+  background: linear-gradient(135deg, var(--interactive-normal), var(--text-accent));
   color: var(--background-primary);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important;
   /* Softens bottom edge */
@@ -522,8 +818,8 @@ body,
 
 /* 🌟 Hover Effect */
 .workspace-tab-header:hover {
-  background: var(--syzygy-highlight-bg);
-  color: var(--interactive-accent);
+  background: var(--background-modifier-hover);
+  color: var(--interactive-normal);
   transform: scale(1.02);
 }
 
@@ -544,12 +840,17 @@ body,
 
 /* 🔥 Pinned Tabs Stand Out */
 .workspace-tab-header.is-pinned {
-  background: var(--interactive-accent);
+  background: var(--interactive-normal);
   color: var(--background-primary);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+.workspace-tab-header-status-icon.mod-pinned {
+  color: var(--background-primary);
+}
+
 
 /* ================= Modular UI Settings ================= */
 /* Workspace Layout Customization */
@@ -578,9 +879,9 @@ body,
   --h2-size: var(--h2-size-setting, 2rem);
   --h3-size: var(--h3-size-setting, 1.75rem);
   --h4-size: var(--h4-size-setting, 1.5rem);
-  --h4-divider-color: var(--h4-divider-color-setting, var(--interactive-accent));
+  --h4-divider-color: var(--h4-divider-color-setting, var(--interactive-normal));
   --h4-divider-style: var(--h4-divider-style-setting, solid);
-  --interactive-accent: var(--text-accent);
+  --interactive-normal: var(--text-accent);
 }
 
 /* Modular Color Scheme Overrides */
@@ -686,7 +987,7 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 2px solid var(--syzygy-border);
+  border: 2px solid var(--divider-color);
   height: 100%;
   border-radius: var(--radius-m);
 }
@@ -700,14 +1001,14 @@ table {
 }
 
 .side-dock-ribbon-action:hover {
-  border: 2px outset var(--interactive-accent);
+  border: 2px outset var(--interactive-normal);
 }
 
 
 
 .workspace-leaf-resize-handle:hover {
-  background-color: var(--interactive-accent);
-  border-inline-end-color: var(--interactive-accent);
+  background-color: var(--interactive-normal);
+  border-inline-end-color: var(--interactive-normal);
 }
 
 /* 🌿 Styled Lists for Syzygy Theme */
@@ -768,7 +1069,7 @@ ol>li {
 /* ✨ Hover Interaction */
 ol>li:hover,
 ul>li:hover {
-  color: var(--interactive-accent);
+  color: var(--interactive-normal);
 }
 
 /* 🎯 Bullet Shape Customization */
