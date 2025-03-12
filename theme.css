@@ -384,7 +384,6 @@ body,
     --color-purple: #a38ac7;
     --color-pink: #d19a99;
 
-    --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   
     --color-red-rgb: 217, 108, 104;
     --color-orange-rgb: 230, 161, 93;
@@ -410,7 +409,7 @@ body,
   --color-base-70: #4a2b2b;
   --color-base-100: #382020;
 
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
+
 
   --color-red: #d37d7b;
   --color-orange: #e6a56b;
@@ -454,7 +453,6 @@ body,
   --color-purple: #9388b3;
   --color-pink: #d79aa3;
 
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
 
   --color-red-rgb: 209, 118, 114;
   --color-orange-rgb: 214, 167, 111;
@@ -490,7 +488,7 @@ body,
   --color-purple: #9d86b6;
   --color-pink: #c48b96;
 
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
+
 
   --color-red-rgb: 176, 93, 90;
   --color-orange-rgb: 196, 135, 93;
@@ -525,7 +523,7 @@ body,
   --color-purple: #9d86b6;
   --color-pink: #c48b96;
 
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
+
 
   --color-red-rgb: 176, 93, 93;
   --color-orange-rgb: 196, 135, 95;
@@ -551,7 +549,7 @@ body,
   --color-base-70: #737373;
   --color-base-100: #e6e6e6;
 
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
+
 
   --color-red: #9c4d4d;
   --color-orange: #ac6b4d;
@@ -579,6 +577,7 @@ body,
   --accent-h: 350;
   --accent-s: 60%;
   --accent-l: 65%;
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #d19a99;
   --h1-color: #d19a99;
   --h2-color: #b07c8f;
@@ -603,8 +602,9 @@ body,
 .theme-syzygy-accent-pine {
   --text-accent: #35524a;
   --accent-h: 160;
-  --accent-s: 50%;
-  --accent-l: 45%;
+  --accent-s: 25%;
+  --accent-l: 35%;
+  --background-modifier-hover: rgba(var(--color-green-rgb), 0.5) !important;
   --heading-formatting: #35524a;
   --h1-color: #35524a;
   --h2-color: #2a423e;
@@ -628,9 +628,10 @@ body,
 
 .theme-syzygy-accent-sage {
   --text-accent: #a7c4a0;
-  --accent-h: 100;
-  --accent-s: 35%;
-  --accent-l: 60%;
+  --accent-h: 89;
+  --accent-s: 21%;
+  --accent-l: 55%;
+  --background-modifier-hover: rgba(var(--color-green-rgb), 0.3) !important;
   --heading-formatting: #a7c4a0;
   --h1-color: #a7c4a0;
   --h2-color: #89a386;
@@ -657,6 +658,7 @@ body,
   --accent-h: 40;
   --accent-s: 55%;
   --accent-l: 50%;
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #8c7851;
   --h1-color: #8c7851;
   --h2-color: #7a6847;
@@ -683,6 +685,7 @@ body,
   --accent-h: 28;
   --accent-s: 65%;
   --accent-l: 50%;
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #b87333;
   --h1-color: #b87333;
   --h2-color: #9e632b;
@@ -709,6 +712,7 @@ body,
   --accent-h: 345;
   --accent-s: 55%;
   --accent-l: 40%;
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #6d1a36;
   --h1-color: #6d1a36;
   --h2-color: #5c162e;
@@ -735,6 +739,7 @@ body,
   --accent-h: 260;
   --accent-s: 40%;
   --accent-l: 65%;
+  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #9c89b8;
   --h1-color: #9c89b8;
   --h2-color: #8879a3;
@@ -815,7 +820,7 @@ body,
 
 /* ✨ Active Tab */
 .workspace-tab-header.is-active {
-  background: linear-gradient(135deg, var(--interactive-normal), var(--text-accent));
+  background: linear-gradient(135deg, var(--interactive-normal), var(--interactive-accent));
   color: var(--background-primary);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important;
   /* Softens bottom edge */
