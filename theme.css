@@ -170,20 +170,20 @@ settings:
 /* 🌑 Syzygy Theme - Personalized, Earthy, and Muted */
 :root {
   /* 🎨 Background Colors */
-  --background-primary: var(--color-base-10) !important;
-  --background-secondary: var(--color-base-20) !important;
-  --syzygy-border: rgba(var(--color-base-40-rgb), 0.3) !important;
+  --background-primary: var(--color-base-10);
+  --background-secondary: var(--color-base-20);
+  --syzygy-border: rgba(var(--color-base-40-rgb), 0.3);
 
   /* 🎯 Text Colors */
   --text-normal: var(--color-base-100) !important;
-  --syzygy-text-muted: var(--color-base-70) !important;
-  --interactive-normal: var(--color-red) !important;
+  --text-muted: var(--color-base-70) !important;
+  --text-accent: var(--color-red) !important;
 
 
   /* 🏆 Headers & Titles */
-  --syzygy-h1-color: var(--color-red) !important;
-  --syzygy-h2-color: var(--color-orange) !important;
-  --syzygy-h3-color: var(--color-green) !important;
+  --h1-color: var(--color-red);
+  --h2-color: var(--color-orange) ;
+  --h3-color: var(--color-green) ;
 
   /* 🟡 Code Blocks */
   --syzygy-code-bg: var(--color-base-05) !important;
@@ -224,6 +224,9 @@ body {
   font-family: var(--syzygy-font-body) !important;
   background-color: var(--background-primary) !important;
   color: var(--text-normal) !important;
+  --titlebar-background: var(--background-primary);
+  --tab-container-background: var(--background-secondary);
+  --background-modifier-hover: var(--color-accent-hsl);
 }
 
 /* 🎨 Headings */
@@ -259,7 +262,7 @@ h4 {
 }
 
 h5 {
-  color: var(--syzygy-text-muted) !important;
+  color: var(--text-muted) !important;
   font-size: 1.25rem !important;
 }
 
@@ -335,9 +338,11 @@ button {
 }
 
 button:hover {
-  background-color: var(--syzygy-h1-color) !important;
+  background-color: var(--h1-color) !important;
   color: var(--background-primary) !important;
 }
+
+
 
 /* ✨ Cursor Glow Effect */
 * {
@@ -573,11 +578,10 @@ body,
 
 /* 🎨 Theme Accents */
 .theme-syzygy-accent-rose {
-  --text-accent: #d19a99;
+  --interactive-normal: #d19a99;
   --accent-h: 350;
   --accent-s: 60%;
   --accent-l: 65%;
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #d19a99;
   --h1-color: #d19a99;
   --h2-color: #b07c8f;
@@ -604,7 +608,6 @@ body,
   --accent-h: 160;
   --accent-s: 25%;
   --accent-l: 35%;
-  --background-modifier-hover: rgba(var(--color-green-rgb), 0.5) !important;
   --heading-formatting: #35524a;
   --h1-color: #35524a;
   --h2-color: #2a423e;
@@ -631,7 +634,6 @@ body,
   --accent-h: 89;
   --accent-s: 21%;
   --accent-l: 55%;
-  --background-modifier-hover: rgba(var(--color-green-rgb), 0.3) !important;
   --heading-formatting: #a7c4a0;
   --h1-color: #a7c4a0;
   --h2-color: #89a386;
@@ -658,7 +660,6 @@ body,
   --accent-h: 40;
   --accent-s: 55%;
   --accent-l: 50%;
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #8c7851;
   --h1-color: #8c7851;
   --h2-color: #7a6847;
@@ -685,7 +686,6 @@ body,
   --accent-h: 28;
   --accent-s: 65%;
   --accent-l: 50%;
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #b87333;
   --h1-color: #b87333;
   --h2-color: #9e632b;
@@ -712,7 +712,6 @@ body,
   --accent-h: 345;
   --accent-s: 55%;
   --accent-l: 40%;
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #6d1a36;
   --h1-color: #6d1a36;
   --h2-color: #5c162e;
@@ -735,11 +734,10 @@ body,
 }
 
 .theme-syzygy-accent-lavender {
-  --text-accent: #9c89b8;
+  --interactive-normal: #9c89b8;
   --accent-h: 260;
   --accent-s: 40%;
   --accent-l: 65%;
-  --background-modifier-hover: rgba(var(--color-red-rgb), 0.3) !important;
   --heading-formatting: #9c89b8;
   --h1-color: #9c89b8;
   --h2-color: #8879a3;
@@ -820,11 +818,15 @@ body,
 
 /* ✨ Active Tab */
 .workspace-tab-header.is-active {
-  background: linear-gradient(135deg, var(--interactive-normal), var(--interactive-accent));
-  color: var(--background-primary);
+  background: var(--interactive-accent);
+  color: var(--interactive-normal);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important;
-  /* Softens bottom edge */
   border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
+}
+
+.workspace-tab-header.is-active:hover {
+  color: var(--text-normal);
+  background-color: var(--interactive-accent-hover);
 }
 
 /* Fix for gaps between adjacent tabs */
@@ -836,16 +838,17 @@ body,
 
 /* 🌟 Hover Effect */
 .workspace-tab-header:hover {
-  background: var(--background-modifier-hover);
-  color: var(--interactive-normal);
+  background: var(--background-secondary-alt);
   transform: scale(1.02);
 }
+
+
 
 /* 🎨 Sidebar Tabs (to differentiate them) */
 .mod-left-split .workspace-tab-header,
 .mod-right-split .workspace-tab-header {
   background: var(--background-primary);
-  color: var(--syzygy-text-muted);
+  color: var(--text-muted);
   border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
 }
 
@@ -858,7 +861,7 @@ body,
 
 /* 🔥 Pinned Tabs Stand Out */
 .workspace-tab-header.is-pinned {
-  background: var(--interactive-normal);
+  background: var(--text-accent);
   color: var(--background-primary);
   font-weight: bold;
   text-transform: uppercase;
@@ -869,6 +872,11 @@ body,
   color: var(--background-primary);
 }
 
+.clickable-icon[aria-disabled='true'] {
+  background-color: --;
+  color: var(--text-muted);
+  opacity: 0.4;
+}
 
 /* ================= Modular UI Settings ================= */
 /* Workspace Layout Customization */
