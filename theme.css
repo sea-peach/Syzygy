@@ -165,6 +165,9 @@ settings:
       type: variable-number
       default: 20
       format: px
+    - id: card-layout
+      title: UI Layout Card Format
+      type:  
 */
 
 /* 🌑 Syzygy Theme - Personalized, Earthy, and Muted */
@@ -172,6 +175,8 @@ settings:
   /* 🎨 Background Colors */
   --background-primary: var(--color-base-10);
   --background-secondary: var(--color-base-20);
+  --background-secondary-alt: var(--color-accent); 
+
   --syzygy-border: rgba(var(--color-base-40-rgb), 0.3);
 
   /* 🎯 Text Colors */
@@ -204,6 +209,7 @@ settings:
   --ribbon-background-collapsed: var(--background-primary);
   --ribbon-width: 100px !important;
   
+  
   /* 🎨 Borders & Messages */
   --background-modifier-border-hover: var(--color-base-35);
   --background-modifier-border-focus: var(--color-base-40);
@@ -211,11 +217,10 @@ settings:
   --background-modifier-success: var(--color-green);
   --background-modifier-message: rgba(var(--mono-rgb-0), 0.9);
 
-  /* Ribbon */
-  --ribbon-background: var(--background-secondary);
-  --ribbon-background-collapsed: var(--background-primary);
-  --ribbon-width: 100px !important;
+
+
 }
+
 
 
 
@@ -226,7 +231,26 @@ body {
   color: var(--text-normal) !important;
   --titlebar-background: var(--background-primary);
   --tab-container-background: var(--background-secondary);
-  --background-modifier-hover: var(--color-accent-hsl);
+  --accent-l-hover: clamp(30%, calc(var(--accent-l) * 1.66), 85%);
+  --background-modifier-hover: hsl(
+    calc(var(--accent-h) - 5), 
+    calc(var(--accent-s) * 0.9), 
+    var(--accent-l-hover)
+);
+
+--tab-text-color: hsl(
+  var(--accent-h), 
+  var(--accent-s), 
+  clamp(75%, calc(var(--accent-l) * 0.2), 90%));
+
+  --tab-text-color-focused-active: var(--tab-text-color);
+  --tab-text-color-focused-highlighted: var(--tab-text-color);
+  --tab-text-color-focused-active-current: var(--tab-text-color);
+  --icon-color: var(--text-color);
+  --icon-color-hover: var(--text-muted);
+  --icon-color-active: var(--tab-text-color);
+  
+ 
 }
 
 /* 🎨 Headings */
@@ -819,7 +843,11 @@ body,
 /* ✨ Active Tab */
 .workspace-tab-header.is-active {
   background: var(--interactive-accent);
-  color: var(--interactive-normal);
+  color: hsl(
+    var(--accent-h), 
+    var(--accent-s), 
+    clamp(75%, calc(var(--accent-l) * 0.2), 90%)
+);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15) !important;
   border-radius: var(--radius-m) var(--radius-m) 0 0 !important;
 }
@@ -994,7 +1022,6 @@ table {
 /* RIBBON */
 .workspace-ribbon {
   width: var(--ribbon-width);
-  flex: 0 0 var(--ribbon-width);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1008,26 +1035,33 @@ table {
   align-content: center;
 }
 
-
 .side-dock-actions {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 2px solid var(--divider-color);
   height: 100%;
   border-radius: var(--radius-m);
-}
-
-.side-dock-settings {
-  visibility: hidden;
+  overflow: hidden; /* Prevents hover overflow */
+  position: relative;
+  border: 2px solid var(--divider-color);
 }
 
 .side-dock-ribbon-action {
   border: 2px solid transparent;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  width: 100%; /* Ensure it doesn't expand beyond its container */
+  max-width: 100%; /* Keeps it within bounds */
+  box-sizing: border-box; /* Prevents unintended size changes */
 }
 
 .side-dock-ribbon-action:hover {
-  border: 2px outset var(--interactive-normal);
+  transform: scale(1.05); /* Slight hover effect without overflowing */
+  background-color: var(--background-modifier-hover);
+  overflow: hidden;
+}
+
+.side-dock-settings {
+  visibility: hidden;
 }
 
 
@@ -1103,4 +1137,10 @@ ul>li::before {
   border: var(--list-bullet-border);
   border-radius: var(--list-bullet-radius);
   transform: var(--list-bullet-transform);
+}
+
+body.card-layout.card-layout-actions .side-dock-actions {
+  border-radius: 0px var(--card-radius, var(--radius-xl)) var(--card-radius, var(--radius-xl)) 0px;
+  margin-top: 2px;
+  border-width: 1px 1px 0px 1px;
 }
